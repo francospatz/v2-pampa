@@ -14,7 +14,7 @@ import image1 from '../../public/images/03.webp'
 /* import SanityPageService from '../../services/sanityPageService' */
 
 
-export default function Journal(initialData) {
+export default function Restaurant(initialData) {
 
   const containerRef = useRef(null)
   const [themeContext, setThemeContext] = useContext(ThemeContext);
@@ -38,7 +38,7 @@ export default function Journal(initialData) {
     }, 0);
   }, []);
 
-  const journal = [
+  const restaurant = [
     {
       slug: "the-menu",
       title: "The Menu",
@@ -92,10 +92,10 @@ export default function Journal(initialData) {
                           <ul className="journal-list">
                             {
 
-                              journal?.map((item, i) => {
+                              restaurant?.map((item, i) => {
                                 return (
                                   <li className={`block border-b border-light-brown ${i == 0 && 'border-t'}`} key={i}>
-                                    <Link legacyBehavior href={`/journal/${item.slug}`}>
+                                    <Link legacyBehavior href={`/restaurant/${item.slug}`}>
                                       <a className="block relative py-4 md:py-6 xl:py-7">
                                         <div className="flex flex-wrap items-end overflow-hidden w-full">
                                           <m.span variants={revealNoDelay} className="block w-full pb-1 md:pb-0 md:w-[110px] xl:w-[200px] text-xs md:text-sm xl:text-base">P/{i < 9 && (0)}{i + 1}</m.span>

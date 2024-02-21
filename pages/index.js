@@ -532,7 +532,7 @@ export default function Home() {
                       </div>
 
                       <div className="2xl:ml-auto flex space-x-4 md:space-x-6">
-                        <Link legacyBehavior href="/journal">
+                        <Link legacyBehavior href="/restaurant">
                           <a className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden drop-shadow-xl">
                             <m.span variants={reveal} className="block">
                               The Restaurant
@@ -552,9 +552,9 @@ export default function Home() {
                           </a>
                         </Link>
 
-                        <a href="https://www.instagram.com/pampagrillmalaga" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341#booking=" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                           <m.span variants={reveal} className="block">
-                            Instagram
+                            Bookings
 
                             <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                           </m.span>
