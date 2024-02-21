@@ -9,30 +9,13 @@ import { ThemeContext } from '@/context/theme'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import image1 from '../../public/images/03.webp'
 /* import SanityPageService from '../../services/sanityPageService' */
 
-const query = `{
-  "journal": *[_type == "journal"] | order(postDate desc) {
-    title,
-    postDate,
-    slug {
-      current
-    },
-    seo {
-      ...,
-      shareGraphic {
-        asset->
-      }
-    }
-  }
-}`
-
-/* const pageService = new SanityPageService(query) */
 
 export default function Journal(initialData) {
-  //const { data: { journal } } = pageService.getPreviewHook(initialData)()
+
   const containerRef = useRef(null)
   const [themeContext, setThemeContext] = useContext(ThemeContext);
   const [introContext, setIntroContext] = useContext(IntroContext);
@@ -63,11 +46,19 @@ export default function Journal(initialData) {
     {
       slug: "our-team",
       title: "Our Team",
+    },
+    {
+      slug: "gift-card",
+      title: "Gift Card",
+    },
+    {
+      slug: "gallery",
+      title: "Gallery",
     }];
 
   return (
     <Layout>
-      <NextSeo title="the-restaurant" />
+      <NextSeo title="Restaurant" />
 
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
@@ -83,7 +74,7 @@ export default function Journal(initialData) {
                 exit="exit"
                 className="min-h-screen flex flex-wrap "
               >
-                <m.div variants={fade} className="bg-off-white text-black selection:bg-black selection:text-black w-full flex flex-wrap">
+                <m.div variants={fade} className="bg-off-white text-light-brown selection:bg-light-brown selection:text-light-brown w-full flex flex-wrap">
                   <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 w-full flex">
 
                     <article className="flex flex-wrap w-full">
@@ -103,7 +94,7 @@ export default function Journal(initialData) {
 
                               journal?.map((item, i) => {
                                 return (
-                                  <li className={`block border-b border-black ${i == 0 && 'border-t'}`} key={i}>
+                                  <li className={`block border-b border-light-brown ${i == 0 && 'border-t'}`} key={i}>
                                     <Link legacyBehavior href={`/journal/${item.slug}`}>
                                       <a className="block relative py-4 md:py-6 xl:py-7">
                                         <div className="flex flex-wrap items-end overflow-hidden w-full">

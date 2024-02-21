@@ -7,7 +7,7 @@ import { ThemeContext } from '@/context/theme'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 
 export default function JournalSlug() {

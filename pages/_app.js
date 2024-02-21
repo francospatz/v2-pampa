@@ -6,7 +6,7 @@ import SEO from '@/helpers/seo.config'
 import { IntroContext } from '@/context/intro'
 import { ThemeContext } from '@/context/theme'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import image1 from '../public/images/01.webp'
 import image2 from '../public/images/02.webp'
 import image3 from '../public/images/04.webp'
@@ -39,10 +39,10 @@ export default function App({ Component, pageProps }) {
   const [themeContext, setThemeContext] = useState(0);
 
   useEffect(() => {
-    setThemeContext(Math.floor(Math.random() * 5))
+    setThemeContext(0)
   }, []);
 
-  let colorThemes = ['bg-off-white text-black'];
+  let colorThemes = ['bg-off-white text-light-brown'];
 
   return (
     <>

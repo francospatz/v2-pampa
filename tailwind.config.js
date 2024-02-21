@@ -49,7 +49,7 @@ module.exports = {
         'blush': '#DBC9BF',
         'green': '#93A38D',
         'blue': '#AEB4BD',
-        'brown': '#242423'
+        'brown': '#151009'
       }
     },
   },

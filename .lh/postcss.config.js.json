@@ -1,0 +1,58 @@
+{
+    "sourceFile": "postcss.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1708501799826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708501876176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': 'postcss-nesting',\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708501932444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    /* 'tailwindcss/nesting': 'postcss-nesting', */\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708501954636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': 'postcss-nesting',\r\n+    /* 'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    }, */\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708501962920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': 'postcss-nesting',\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708502044909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-module.exports = {\r\n+/* module.exports = {\r\n   plugins: {\r\n     'postcss-import': {},\r\n     'tailwindcss/nesting': 'postcss-nesting',\r\n     'postcss-nested': {\r\n@@ -7,5 +7,14 @@\n     },\r\n     tailwindcss: {},\r\n     autoprefixer: {},\r\n   },\r\n-}\n\\ No newline at end of file\n+} */\r\n+\r\n+module.exports = {\r\n+  plugins: [\r\n+  require('postcss-import'),\r\n+  require('tailwindcss/nesting')(require('postcss-nesting')),\r\n+  require('autoprefixer'),\r\n+  require('tailwindcss'),\r\n+  ]\r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708502068355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': 'postcss-nesting',\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708502487045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': {},\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708502607569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+/* module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': {},\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+} */\r\n+\r\n+module.exports = {\r\n+  plugins: {\r\n+    \"postcss-import\": {},\r\n+    \"tailwindcss/nesting\": {},\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708502706353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+/* module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': {},\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  },\r\n+} */\r\n+\r\n+module.exports = {\r\n+  plugins: {\r\n+    'postcss-import': {},\r\n+    'tailwindcss/nesting': 'postcss-nesting',\r\n+    tailwindcss: {},\r\n+    autoprefixer: {},\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1708502906304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,11 @@\n module.exports = {\r\n   plugins: {\r\n     'postcss-import': {},\r\n     'tailwindcss/nesting': 'postcss-nesting',\r\n+    'postcss-nested': {\r\n+      unwrap: ['screen'],\r\n+    },\r\n     tailwindcss: {},\r\n     autoprefixer: {},\r\n   }\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1708501799826,
+            "name": "Commit-0",
+            "content": "module.exports = {\r\n  plugins: {\r\n    'postcss-import': {},\r\n    'tailwindcss/nesting': 'postcss-nesting',\r\n    tailwindcss: {},\r\n    'postcss-nested': {\r\n      unwrap: ['screen'],\r\n    },\r\n    autoprefixer: {},\r\n  },\r\n}"
+        }
+    ]
+}
