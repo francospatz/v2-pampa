@@ -67,7 +67,7 @@ export default function Restaurant(initialData) {
           className="h-full flex flex-wrap "
         >
           <m.div variants={fade} className="bg-off-white text-light-brown selection:bg-light-brown selection:text-light-brown w-full flex flex-wrap">
-            <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 w-full flex">
+            <m.main variants={fade} className="p-4 md:p-6 relative w-full flex">
 
               <article className="flex flex-wrap w-full">
                 <div className="w-full relative z-10">

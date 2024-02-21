@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }) {
   return (
     <Lenis root>
       <DefaultSeo {...SEO} />
-      <div className="grain fixed w-full h-full inset-0 pointer-events-none z-[10000]"></div>
+      <div className="grain fixed w-full  inset-0 pointer-events-none z-[10000]"></div>
 
       <IntroContext.Provider value={[introContext, setIntroContext]}>
         <ThemeContext.Provider value={[themeContext, setThemeContext]}>
@@ -69,7 +69,7 @@ export default function App({ Component, pageProps }) {
                   animate="visible"
                   variants={introEnd}
                   transition={{ delay: 2.6, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
-                  className={`fixed inset-0 z-[1000] h-full flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
+                  className={`fixed inset-0 z-[1000] flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
                 >
                   <div
                     className="relative overflow-hidden w-full max-w-xs md:max-w-md 2xl:max-w-xl"
