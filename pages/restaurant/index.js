@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
 import Image from "next/legacy/image"
 import image1 from '../../public/images/03.webp'
+import Div100vh from 'react-div-100vh'
 /* import SanityPageService from '../../services/sanityPageService' */
 
 
@@ -65,7 +66,7 @@ export default function Restaurant(initialData) {
         containerRef={containerRef}
         watch={[]}
       >
-        <div data-scroll-container ref={containerRef} id="scroll-container">
+        <Div100vh data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>
             <LazyMotion features={domAnimation}>
               <m.div
@@ -137,7 +138,7 @@ export default function Restaurant(initialData) {
               </m.div>
             </LazyMotion>
           </div>
-        </div>
+        </Div100vh>
       </LocomotiveScrollProvider>
     </Layout>
   )

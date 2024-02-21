@@ -7,6 +7,7 @@ import { ThemeContext } from '@/context/theme'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
+import Div100vh from 'react-div-100vh'
 
 
 export default function Terms() {
@@ -41,7 +42,7 @@ export default function Terms() {
         containerRef={containerRef}
         watch={[]}
       >
-        <div data-scroll-container ref={containerRef} id="scroll-container">
+        <Div100vh data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>
             <LazyMotion features={domAnimation}>
               <m.div
@@ -287,7 +288,7 @@ export default function Terms() {
               </m.div>
             </LazyMotion>
           </div>
-        </div>
+        </Div100vh>
       </LocomotiveScrollProvider>
     </Layout>
   )

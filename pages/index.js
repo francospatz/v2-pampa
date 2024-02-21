@@ -14,6 +14,7 @@ import image2 from '../public/images/02.webp'
 import image3 from '../public/images/04.webp'
 import image4 from '../public/images/05.webp'
 import image5 from '../public/images/06.webp'
+import Div100vh from 'react-div-100vh'
 
 
 export default function Home() {
@@ -74,7 +75,7 @@ export default function Home() {
         containerRef={containerRef}
         watch={[]}
       >
-        <div data-scroll-container ref={containerRef} id="scroll-container">
+        <Div100vh data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>
             <LazyMotion features={domAnimation}>
               <m.div
@@ -577,7 +578,7 @@ export default function Home() {
               </m.div>
             </LazyMotion>
           </div>
-        </div>
+        </Div100vh>
       </LocomotiveScrollProvider>
     </Layout>
   )

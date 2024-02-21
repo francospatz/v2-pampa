@@ -6,6 +6,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
+import Div100vh from 'react-div-100vh'
 
 export default function Contact() {
   const containerRef = useRef(null)
@@ -39,7 +40,7 @@ export default function Contact() {
         containerRef={containerRef}
         watch={[]}
       >
-        <div data-scroll-container ref={containerRef} id="scroll-container">
+        <Div100vh data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>
             <LazyMotion features={domAnimation}>
               <m.div
@@ -147,7 +148,7 @@ export default function Contact() {
               </m.div>
             </LazyMotion>
           </div>
-        </div>
+        </Div100vh>
       </LocomotiveScrollProvider>
     </Layout>
   )
