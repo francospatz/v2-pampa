@@ -67,9 +67,9 @@ export default function Restaurant(initialData) {
           exit="exit"
           className="flex flex-wrap "
         >
-          <Div100vh className='w-full'>
+          <Div100vh className='w-full bg-off-white'>
             <m.div variants={fade} className="bg-off-white text-light-brown selection:bg-light-brown selection:text-light-brown w-full h-full flex flex-wrap">
-              <m.main variants={fade} className="p-4 md:p-6 relative w-full flex">
+              <m.main variants={fade} className="p-4 md:p-6 relative w-full flex bg-off-white" >
 
                 <article className="flex flex-wrap w-full">
                   <div className="w-full relative z-10">
@@ -110,7 +110,7 @@ export default function Restaurant(initialData) {
                 </article>
               </m.main>
 
-              <m.footer variants={fade} className="p-4 md:p-6 relative w-full flex items-end">
+              <m.footer variants={fade} className="p-4 md:p-6 bg-off-white relative w-full flex items-end">
                 <div className="flex flex-wrap w-full">
                   <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
 

@@ -42,9 +42,9 @@ export default function Contact() {
           animate="enter"
           exit="exit"
 
-        ><Div100vh className='w-full'>
+        ><Div100vh className='w-full bg-off-white'>
             <m.div variants={fade} className=" bg-off-white text-black selection:bg-black selection:text-black flex flex-wrap h-full">
-              <m.main variants={fade} className="p-4 md:p-6 relative pb-0  w-full">
+              <m.main variants={fade} className="p-4 md:p-6 relative pb-0  w-full bg-off-white">
 
                 <article className="flex flex-wrap">
                   <div className="w-full md:w-11/12 xl:w-10/12 relative z-10 mb-16 md:mb-28 xl:mb-40">
