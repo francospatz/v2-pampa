@@ -475,7 +475,7 @@ export default function Home() {
                       <span className="block overflow-hidden">
                         <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                           <span className="block translate-y-[-8px]">
-                            Devoted
+                            Devoted to
                           </span>
                         </m.span>
                       </span>
@@ -483,7 +483,7 @@ export default function Home() {
                       <span className="block overflow-hidden">
                         <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                           <span className="block translate-y-[-8px]">
-                            to elevating the art
+                            elevating the art
                           </span>
                         </m.span>
                       </span>
