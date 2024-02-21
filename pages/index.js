@@ -75,6 +75,7 @@ export default function Home() {
           initial="initial"
           animate="enter"
           exit="exit"
+          className='h-full'
         >
           <m.main variants={fade} className={`p-4 md:p-6 h-full relative ${colorThemes[themeContext]}`}>
 

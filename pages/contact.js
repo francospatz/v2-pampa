@@ -40,6 +40,7 @@ export default function Contact() {
           initial="initial"
           animate="enter"
           exit="exit"
+          className='h-full'
         >
           <m.div variants={fade} className="min-h-screen bg-off-white text-black selection:bg-black selection:text-black flex flex-wrap">
             <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 w-full mb-auto">

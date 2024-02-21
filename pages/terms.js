@@ -41,6 +41,7 @@ export default function Terms() {
           initial="initial"
           animate="enter"
           exit="exit"
+          className='h-full'
         >
           <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 bg-off-white text-black selection:bg-black selection:text-off-white">
 
