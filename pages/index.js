@@ -130,7 +130,7 @@ export default function Home() {
                       <div className="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image1}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -141,7 +141,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image2}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -152,7 +152,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image3}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -163,7 +163,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image4}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -174,7 +174,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image5}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -188,7 +188,7 @@ export default function Home() {
                       <div className="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image1}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -199,7 +199,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image2}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -210,7 +210,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image3}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -221,7 +221,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image4}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -232,7 +232,7 @@ export default function Home() {
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image5}
                             className="w-[65vw] object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -254,7 +254,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image1}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -267,7 +267,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image2}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -280,7 +280,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image3}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -293,7 +293,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image4}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -306,7 +306,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image5}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -319,7 +319,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image1}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -332,7 +332,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image2}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -345,7 +345,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image3}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -361,7 +361,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image1}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -374,7 +374,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image2}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -387,7 +387,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image3}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -400,7 +400,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image4}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -413,7 +413,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image5}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -426,7 +426,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image1}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -439,7 +439,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image2}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -452,7 +452,7 @@ export default function Home() {
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
                           <Image
-                            alt="Hand model"
+                            alt="Pampa Grill"
                             src={image3}
                             className="w-full object-cover object-center scale-105 opacity-100"
                             layout="responsive"
@@ -532,6 +532,13 @@ export default function Home() {
                       </div>
 
                       <div className="2xl:ml-auto flex space-x-4 md:space-x-6">
+                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341#booking=" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                          <m.span variants={reveal} className="block">
+                            Bookings
+
+                            <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                          </m.span>
+                        </a>
                         <Link legacyBehavior href="/restaurant">
                           <a className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden drop-shadow-xl">
                             <m.span variants={reveal} className="block">
@@ -552,13 +559,7 @@ export default function Home() {
                           </a>
                         </Link>
 
-                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341#booking=" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
-                          <m.span variants={reveal} className="block">
-                            Bookings
 
-                            <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
-                          </m.span>
-                        </a>
 
                         <Link legacyBehavior href="/terms">
                           <a className="block uppercase  text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">

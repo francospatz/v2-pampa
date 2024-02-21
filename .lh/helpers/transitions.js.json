@@ -1,0 +1,22 @@
+{
+    "sourceFile": "helpers/transitions.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1708516492180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708516908986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     transition: { duration: 0.9, ease: [0.83, 0, 0.17, 1] }\r\n   },\r\n   exit: {\r\n     opacity: 0,\r\n-    transition: { delay: 0.5, duration: 0.9, ease: [0.83, 0, 0.17, 1] }\r\n+    transition: { duration: 0.9, ease: [0.83, 0, 0.17, 1] }\r\n   }\r\n }\r\n \r\n export const reveal = {\r\n"
+                }
+            ],
+            "date": 1708516492180,
+            "name": "Commit-0",
+            "content": "export const fade = {\r\n\tinitial: { opacity: 0 },\r\n  enter: { \r\n    opacity: 1,\r\n    transition: { duration: 0.9, ease: [0.83, 0, 0.17, 1] }\r\n  },\r\n\texit: {\r\n    opacity: 0,\r\n\t\ttransition: { delay: 0.2, duration: 0.9, ease: [0.83, 0, 0.17, 1] }\r\n\t}\r\n}\r\n\r\nexport const reveal = {\r\n\tinitial: { y: '100%' },\r\n  enter: { \r\n    y: 0,\r\n    transition: { delay: 2.8, duration: 0.65, ease: [0.83, 0, 0.17, 1] }\r\n  },\r\n\texit: {\r\n    y: '100%',\r\n\t\ttransition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }\r\n\t}\r\n}\r\n\r\nexport const revealNoDelay = {\r\n\tinitial: { y: '100%' },\r\n  enter: { \r\n    y: 0,\r\n    transition: { delay: 0.2, duration: 0.65, ease: [0.83, 0, 0.17, 1] }\r\n  },\r\n\texit: {\r\n    y: '100%',\r\n\t\ttransition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }\r\n\t}\r\n}"
+        }
+    ]
+}
