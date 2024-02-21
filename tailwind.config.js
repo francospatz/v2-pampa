@@ -9,6 +9,7 @@ module.exports = {
       'mono': ['Lucida Console', 'Courier', 'monospace'],
     },
     screens: {
+      xs: '350px',
       sm: "640px",
       md: "768px",
       lg: "1024px",

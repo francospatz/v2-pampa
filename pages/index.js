@@ -497,7 +497,7 @@ export default function Home() {
                       <span className="block overflow-hidden">
                         <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                           <span className="block translate-y-[-8px]">
-                            of Argentinean grilling
+                            of Argentine grilling
                           </span>
                         </m.span>
                       </span>
@@ -529,7 +529,7 @@ export default function Home() {
                   </div>
 
                   <div className="2xl:ml-auto flex space-x-4 md:space-x-6">
-                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341#booking=" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341#booking=" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base xs:text-[8px]:text-[8px] group overflow-hidden">
                       <m.span variants={reveal} className="block">
                         Bookings
 
@@ -537,7 +537,7 @@ export default function Home() {
                       </m.span>
                     </a>
                     <Link legacyBehavior href="/restaurant">
-                      <a className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden drop-shadow-xl">
+                      <a className="block uppercase text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base xs:text-[8px]:text-[8px] group overflow-hidden drop-shadow-xl">
                         <m.span variants={reveal} className="block">
                           The Restaurant
 
@@ -547,7 +547,7 @@ export default function Home() {
                     </Link>
 
                     <Link legacyBehavior href="/contact">
-                      <a className="block uppercase  text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <a className="block uppercase  text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base xs:text-[8px]:text-[8px] group overflow-hidden">
                         <m.span variants={reveal} className="block">
                           Contact
 
@@ -559,7 +559,7 @@ export default function Home() {
 
 
                     <Link legacyBehavior href="/terms">
-                      <a className="block uppercase  text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <a className="block uppercase  text-[12px] text-light-brown md:text-base 2xl:text-[14px] 3xl:text-base xs:text-[8px]:text-[8px] group overflow-hidden">
                         <m.span variants={reveal} className="block">
                           Terms
 

@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
           <link rel="manifest" href="/images/site.webmanifest" />
           <meta name="msapplication-TileColor" content="#da532c" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#FCF9F0" />
         </Head>
 
         <body>
