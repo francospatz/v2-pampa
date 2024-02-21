@@ -43,7 +43,7 @@ export default function Terms() {
           exit="exit"
           className='h-full'
         >
-          <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 bg-off-white text-black selection:bg-black selection:text-off-white">
+          <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown">
 
             <article className="flex flex-wrap">
               <div className="w-full relative z-10">
@@ -261,7 +261,7 @@ export default function Terms() {
             </article>
           </m.main>
 
-          <m.footer variants={fade} className="p-4 md:p-6 relative bg-off-white text-black">
+          <m.footer variants={fade} className="p-4 md:p-6 relative bg-off-white text-light-brown">
             <div className="flex flex-wrap">
               <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
 

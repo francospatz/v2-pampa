@@ -42,7 +42,7 @@
   table {
     thead {
       td {
-        @apply border border-gray-300 p-3 bg-black bg-opacity-10;
+        @apply border border-gray-300 p-3 bg-off-white bg-opacity-10;
       }
     }
     td {
@@ -120,14 +120,14 @@
 .custom-file-input::before {
   content: "Select Image(s)";
   display: inline-block;
-  @apply bg-blush text-black text-xs px-6 py-2 rounded-full transition-colors ease-in-out duration-500;
+  @apply bg-blush text-light-brown text-xs px-6 py-2 rounded-full transition-colors ease-in-out duration-500;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
 }
 .custom-file-input:hover::before {
-  @apply bg-light-brown text-black;
+  @apply bg-light-brown text-light-brown;
 }
 
 .journal-list {

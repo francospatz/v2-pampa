@@ -46,11 +46,11 @@ module.exports = {
         'black': '#000000',
         'white': '#FFFFFF',
         'off-white': '#FCF9F0',
-        'light-brown': '#C89868',
+        'light-brown': '#242423',
         'blush': '#DBC9BF',
         'green': '#93A38D',
         'blue': '#AEB4BD',
-        'brown': '#151009'
+        'brown': '#C89868'
       }
     },
   },

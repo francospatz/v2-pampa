@@ -43,7 +43,7 @@ export default function Contact() {
           exit="exit"
 
         ><Div100vh className='w-full bg-off-white'>
-            <m.div variants={fade} className=" bg-off-white text-black selection:bg-black selection:text-black flex flex-wrap h-full">
+            <m.div variants={fade} className=" bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown flex flex-wrap h-full">
               <m.main variants={fade} className="p-4 md:p-6 relative pb-0  w-full bg-off-white">
 
                 <article className="flex flex-wrap">
@@ -58,7 +58,7 @@ export default function Contact() {
                           <m.span variants={reveal} className="block">All enquiries</m.span>
                         </span>
 
-                        <a href="mailto:info@pampagrillmalaga.com" className="inline-block group font-serif text-black relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] mr-8  transition-colors ease-in-out duration-500 overflow-hidden group">
+                        <a href="mailto:info@pampagrillmalaga.com" className="inline-block group font-serif text-light-brown relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] mr-8  transition-colors ease-in-out duration-500 overflow-hidden group">
                           <m.span variants={reveal} className="block">
                             info@pampagrillmalaga.com
 
@@ -72,7 +72,7 @@ export default function Contact() {
                           <m.span variants={reveal} className="block">Location</m.span>
                         </span>
 
-                        <div><a href="https://maps.app.goo.gl/dMJyDeobhFWNYkE7A" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif mb-3 text-black relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tr  transition-colors ease-in-out duration-500 overflow-hidden">
+                        <div><a href="https://maps.app.goo.gl/dMJyDeobhFWNYkE7A" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif mb-3 text-light-brown relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tr  transition-colors ease-in-out duration-500 overflow-hidden">
                           <m.span variants={reveal} className="block">C. Sánchez Pastor, 10, Málaga
 
                             <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
@@ -85,7 +85,7 @@ export default function Contact() {
                           <m.span variants={reveal} className="block">Social</m.span>
                         </span>
 
-                        <div><a href="https://www.instagram.com/pampagrillmalaga" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif mb-3 text-black relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tr  transition-colors ease-in-out duration-500 overflow-hidden">
+                        <div><a href="https://www.instagram.com/pampagrillmalaga" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif mb-3 text-light-brown relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tr  transition-colors ease-in-out duration-500 overflow-hidden">
                           <m.span variants={reveal} className="block">Instagram
 
                             <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
@@ -93,7 +93,7 @@ export default function Contact() {
                         </a>
                         </div>
 
-                        <div><a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341#booking=" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif mb-3 text-black relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 transition-colors ease-in-out duration-500 overflow-hidden">
+                        <div><a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341#booking=" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif mb-3 text-light-brown relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 transition-colors ease-in-out duration-500 overflow-hidden">
                           <m.span variants={reveal} className="block">The Fork
 
                             <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
@@ -101,7 +101,7 @@ export default function Contact() {
                         </a>
                         </div>
 
-                        <div><a href="https://www.tripadvisor.es/Restaurant_Review-g187438-d13200317-Reviews-Pampa_Grill_Malaga-Malaga_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif  text-black relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 transition-colors ease-in-out duration-500 overflow-hidden">
+                        <div><a href="https://www.tripadvisor.es/Restaurant_Review-g187438-d13200317-Reviews-Pampa_Grill_Malaga-Malaga_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif  text-light-brown relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 transition-colors ease-in-out duration-500 overflow-hidden">
                           <m.span variants={reveal} className="block">Tripadvisor
 
                             <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
@@ -117,7 +117,7 @@ export default function Contact() {
                 </article>
               </m.main>
 
-              <m.footer variants={fade} className="p-4 md:p-6 relative bg-off-white text-brown w-full mt-auto mb-[-4px]">
+              <m.footer variants={fade} className="p-4 md:p-6 relative bg-off-white text-light-brown w-full mt-auto mb-[-4px]">
                 <div className="flex flex-wrap">
 
 
@@ -125,7 +125,7 @@ export default function Contact() {
                     <m.span variants={reveal} className="block">© Pampa Grill 2024</m.span>
                   </span>
 
-                  <span className="hidden xl:block w-1/2 md:w-auto font-sans uppercase text-black text-sm md:text-base xl:text-lg ml-auto font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0 fixed top-0 right-0 m-6 overflow-hidden pb-[4px]">
+                  <span className="hidden xl:block w-1/2 md:w-auto font-sans uppercase text-light-brown text-sm md:text-base xl:text-lg ml-auto font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0 fixed top-0 right-0 m-6 overflow-hidden pb-[4px]">
                     <Link legacyBehavior href="/"><a className="group ">
                       <m.span variants={reveal} className="block">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></m.span></a></Link>
                   </span>
