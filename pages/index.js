@@ -77,7 +77,8 @@ export default function Home() {
           animate="enter"
           exit="exit"
 
-        ><Div100vh>
+        >
+          <Div100vh>
             <m.main variants={fade} className={`p-4 md:p-6 h-full relative ${colorThemes[themeContext]}`}>
 
               <div className="absolute top-0 right-0 left-0 md:left-auto md:bottom-0 z-[10000] px-6 md:px-[20px] py-3 md:py-6 hidden md:block">
@@ -124,55 +125,55 @@ export default function Home() {
               <div className="block md:hidden absolute z-100 bottom-0 right-0 w-[100vw] mb-[5vw]">
                 <div className="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
                   <div className="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image1}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image2}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image3}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image4}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image5}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
@@ -182,55 +183,55 @@ export default function Home() {
                   </div>
 
                   <div className="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image1}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image2}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image3}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image4}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
                         height={1613}
                       />
                     </div>
-                    <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="h-full w-[60vw] overflow-hidden">
                       <Image
                         alt="Pampa Grill"
                         src={image5}
-                        className="w-[65vw] object-cover object-center scale-105 opacity-100"
+                        className="w-[60vw] object-cover object-center scale-105 opacity-100"
                         layout="responsive"
                         priority={true}
                         width={1334}
