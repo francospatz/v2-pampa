@@ -76,7 +76,7 @@ export default function Home() {
           animate="enter"
           exit="exit"
         >
-          <m.main variants={fade} className={`p-4 md:p-6 h-screen relative ${colorThemes[themeContext]}`}>
+          <m.main variants={fade} className={`p-4 md:p-6 h-full relative ${colorThemes[themeContext]}`}>
 
             <div className="absolute top-0 right-0 left-0 md:left-auto md:bottom-0 z-[10000] px-6 md:px-[20px] py-3 md:py-6 hidden md:block">
               <span className="h-full flex flex-row md:flex-col font-sans uppercase text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
