@@ -1,0 +1,22 @@
+{
+    "sourceFile": "helpers/seo.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1708495167750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1708498095718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,6 @@\n         height: 630,\n         alt: `Pampa Grill`,\n       },\n     ],\n-  },\n-  twitter: {\n-    handle: '@pampagrill',\n-    site: '@site',\n-    cardType: 'summary_large_image',\n-  },\n+  }\n };\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1708495167750,
+            "name": "Commit-0",
+            "content": "export default {\n  defaultTitle: 'Pampa Grill | Malaga',\n  description: 'Hello, we are Pampa Grill, a gourmet Argentine grill restaurant located in Malaga, Spain.',\n  titleTemplate: '%s | Pampa Grill',\n  openGraph: {\n    type: 'website',\n    locale: 'en_GB',\n    url: 'https://pampagrillmalaga.com',\n    site_name: 'Pampa Grill',\n    images: [\n      {\n        url: '/images/social.webp',\n        width: 1200,\n        height: 630,\n        alt: `Pampa Grill`,\n      },\n    ],\n  },\n  twitter: {\n    handle: '@pampagrill',\n    site: '@site',\n    cardType: 'summary_large_image',\n  },\n};"
+        }
+    ]
+}

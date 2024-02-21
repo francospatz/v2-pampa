@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Tailwind Framer Motion Boilerplate
+Demo: [https://sg-next-tailwind-motion.vercel.app/](https://sg-next-tailwind-motion.vercel.app/)
 
-## Getting Started
+Locomotive Scroll Demo: [https://sg-next-tailwind-motion-locomotive.vercel.app/](https://sg-next-tailwind-motion-locomotive.vercel.app/)
 
-First, run the development server:
+A simple [Next.js](https://nextjs.org/) boilerplate with [TailwindCSS](https://tailwindcss.com/) ([JIT](https://tailwindcss.com/docs/just-in-time-mode)), [Framer Motion](https://www.framer.com/motion/), and a few other nice bits preconfigured.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+- [Next](https://nextjs.org/) 12
+- [SWC Minification](https://nextjs.org/docs/
+- [Tailwind](https://tailwindcss.com/) (With [JIT](https://tailwindcss.com/docs/just-in-time-mode) mode enabled)
+- Custom [PostCSS](https://postcss.org/) setup preconfigured to allow for `@import` and simple CSS nesting
+- [Framer Motion 4](https://www.framer.com/motion/) (With [LazyMotion](https://www.framer.com/api/motion/lazy-motion/) setup for smaller bundle sizes)
+- [Preact](https://preactjs.com/) preconfigured instead of React for smaller bundle size*
+- SEO preconfigured with [next-seo](https://github.com/garmeeh/next-seo)
+- [Module Aliasing](https://nextjs.org/docs/advanced-features/module-path-aliases) preconfigured with `jsconfig.json`
+- [Feature branch](https://github.com/samuelgoddard/next-tailwind-motion/tree/locomotive-scroll) with [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/) preconfigured for smooth, lerp based page scrolling
+- Out the box 100 scores on both mobile &amp; desktop on [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsg-next-tailwind-motion-locomotive.vercel.app%2F&tab=mobile)
+
+_*To remove Preact and switch back to React simply remove the code in `next.config.js`_
+
+### Roadmap / Coming Soon...
+- Feature branch with [Sanity](https://www.sanity.io/) preconfigured
+- Feature branch with [DatoCMS](https://www.datocms.com/) preconfigured
+- Feature branch with [GSAP](https://greensock.com/gsap/) preconfigured
+
+## 🚀 Quick start
+
+1.  **Clone the repo**
+
+    ```sh
+    git clone https://github.com/samuelgoddard/next-tailwind-motion.git
+    ```
+
+2.  **Start developing**
+
+    Navigate into your new site’s directory and install the local dependencies first, then run the dev command.
+
+    ```sh
+    cd next-tailwind-motion/
+    
+    npm i
+    npm run dev
+    ```
+
+3.  **Open the source code and start editing!**
+
+    Your site is will be running at `http://localhost:3000`
+
+## 🗄 Directory Structure
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+|-- components
+    |-- container.js *// A simple container component to wrap areas in a max width*
+    |-- fancyLink.js *// A simple wrapper around `next/link`
+    |-- footer.js *// Example footer component*
+    |-- header.js *// Example header component*
+    |-- layout.js *// Layout component that can be used to wrap your pages in a global layout*
+|-- helpers
+    |-- seo.config.js *// default SEO configuration helper, imported in `pages/_app.js`*
+    |-- transitions.js *// re-usable framer motion transition helper with a basic 'fade' transition to get started*
+|-- pages
+    |-- _app.js *// Includes default SEO component, Framer motion AnimatePresence & Locomotive Scroll init*
+    |-- _document.js *// Default Next document component*
+    |-- about.js
+    |-- index.js
+|-- public *// Next public assets*
+|-- styles
+    |-- _locomotive.css *// custom locomotive scroll styles*
+    |-- _fonts.css *// custom webfont styles*
+    |-- _typography.css *// custom typographical styles*
+    |-- main.css *// Tailwind init and custom css imports*
+|-- .gitignore
+|-- jsconfig.json *// module aliasing*
+|-- postcss.config.js *// Tailwind, CSS import, CSS nesting init*
+|-- next.config.js *// Prefer Preact to React*
+|-- package.json
+|-- README.md
+|-- tailwind.config.js
+```
