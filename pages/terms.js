@@ -55,7 +55,7 @@ export default function Terms() {
 
                 <span className="hidden xl:block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg ml-auto font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0 fixed top-0 right-0 m-6 overflow-hidden pb-[4px]">
                   <Link legacyBehavior href="/"><a className="group ">
-                    <m.span variants={revealNoDelay} className="block">Back Home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></m.span></a></Link>
+                    <m.span variants={revealNoDelay} className="block">Back to Home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></m.span></a></Link>
                 </span>
               </div>
 
@@ -92,7 +92,7 @@ export default function Terms() {
 
                   <p>1. Information you give us</p>
 
-                  <p>1.1. We process Personal Data that we need to contact you including your name, email address, telephone number and postal address. You might share this information with us by telephone, through our website or by e-mail. We use the personal information you have provided to us to reply with the information you have asked us for. It is your responsibility to inform us of any changes to your Personal Data.</p>
+                  <p>1.1. We process Personal Data that we need to contact you including your name, email address and telephone number. You might share this information with us by telephone, through our website or by e-mail. We use the personal information you have provided to us to reply with the information you have asked us for. It is your responsibility to inform us of any changes to your Personal Data.</p>
 
                   <p>1.2. We process information relating to transactions, such as purchases of goods and/or services, that you enter into with us or complete through our website including the transaction details, your name, your contact details, and your payment details.</p>
 
@@ -261,19 +261,11 @@ export default function Terms() {
             </article>
           </m.main>
 
-          <m.footer variants={fade} className="p-4 md:p-6 relative bg-off-white text-light-brown">
-            <div className="flex flex-wrap">
-              <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
+          <m.footer variants={fade} className="p-4 md:p-6 bg-off-white relative w-full flex items-end">
+            <div className="flex flex-row w-full">
+              <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-0">© Pampa Grill 2024</span>
 
-
-
-              <span className="hidden md:block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
-                <Link legacyBehavior href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
-              </span>
-
-              <span className="block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight ml-auto"><Link legacyBehavior href="/contact"><a className="group relative">Contact Us <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link></span>
-
-              <span className="block w-1/2 md:w-auto text-right md:hidden ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
+              <span className="block xl:hidden w-1/2  text-right  ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
                 <Link legacyBehavior href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
               </span>
             </div>
