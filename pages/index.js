@@ -507,6 +507,13 @@ export default function Home() {
                   </div>
 
                   <div className="2xl:ml-auto flex space-x-4 md:space-x-6">
+                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341?cc=16768-fbd&gad_source=1&gclid=CjwKCAiA29auBhBxEiwAnKcSqjiOXnPSN0N7bU4HpOtGitNOLy3O8EUTIgBcn_7MLL9nIOl2J8f1MxoC5BIQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <m.span variants={reveal} className="block">
+                        Bookings
+
+                        <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                      </m.span>
+                    </a>
                     <Link legacyBehavior href="/restaurant">
                       <a className="block uppercase text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                         <m.span variants={reveal} className="block">
@@ -527,13 +534,7 @@ export default function Home() {
                       </a>
                     </Link>
 
-                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341?cc=16768-fbd&gad_source=1&gclid=CjwKCAiA29auBhBxEiwAnKcSqjiOXnPSN0N7bU4HpOtGitNOLy3O8EUTIgBcn_7MLL9nIOl2J8f1MxoC5BIQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
-                      <m.span variants={reveal} className="block">
-                        Bookings
 
-                        <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
-                      </m.span>
-                    </a>
 
                     <Link legacyBehavior href="/terms">
                       <a className="block uppercase  text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">

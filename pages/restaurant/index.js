@@ -45,17 +45,15 @@ export default function Restaurant(initialData) {
       title: "The Menu",
     },
     {
-      slug: "our-team",
-      title: "Our Team",
+      slug: "gallery",
+      title: "Gallery",
     },
+
     {
       slug: "gift-card",
       title: "Gift Card",
     },
-    {
-      slug: "gallery",
-      title: "Gallery",
-    }];
+  ];
 
   return (
     <Layout>
