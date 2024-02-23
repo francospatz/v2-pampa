@@ -1,4 +1,5 @@
-import { useContext, useEffect, useRef, useState } from 'react'
+'use client'
+import { useContext, useEffect, useRef } from 'react'
 import Layout from '@/components/layout'
 import { fade, revealNoDelay } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'

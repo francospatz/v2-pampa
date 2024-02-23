@@ -1,3 +1,4 @@
+'use client'
 import { useRouter } from 'next/router'
 import TheMenu from './components/the-menu'
 import OurTeam from './components/our-team';

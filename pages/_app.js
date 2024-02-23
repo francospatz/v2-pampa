@@ -1,4 +1,5 @@
-import '@/styles/main.css'
+'use client'
+import '@/styles/main.scss'
 import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion"
 import { useRouter } from 'next/router'
 import { DefaultSeo } from 'next-seo'
@@ -13,6 +14,7 @@ import image3 from '../public/images/04.webp'
 import image4 from '../public/images/05.webp'
 import image5 from '../public/images/06.webp'
 import { Lenis } from '@studio-freight/react-lenis'
+
 
 const introEnd = {
   visible: { opacity: 0 },

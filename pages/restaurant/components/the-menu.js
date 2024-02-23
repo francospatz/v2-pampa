@@ -1,3 +1,4 @@
+'use client'
 import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import { fade, revealNoDelay } from '@/helpers/transitions'
@@ -395,7 +396,7 @@ export default function TheMenu() {
                             </article>
                         </m.main>
 
-                        <m.footer variants={fade} className="p-4 md:p-6 relative bg-off-white text-light-brown">
+                        <m.footer variants={fade} className="align-bottom p-4 md:p-6 relative bg-off-white text-light-brown">
                             <div className="flex flex-wrap">
                                 <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
 

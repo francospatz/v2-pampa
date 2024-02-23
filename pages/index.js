@@ -1,3 +1,4 @@
+'use client'
 import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import { fade } from '@/helpers/transitions'
@@ -18,6 +19,7 @@ import Div100vh from 'react-div-100vh'
 
 
 export default function Home() {
+  <NextSeo title="Pampa Grill" />
   const containerRef = useRef(null)
 
   const [introContext, setIntroContext] = useContext(IntroContext);

@@ -1,3 +1,4 @@
+'use client'
 import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import { fade } from '@/helpers/transitions'
@@ -53,7 +54,7 @@ export default function Contact() {
                   </div>
 
                   <div className="w-full mt-auto">
-                    <div className="flex flex-wrap">
+                    <div className="flex flex-wrap-reverse">
                       <div className="w-full md:w-1/2  md:pr-12 xl:pr-24">
                         <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-5 relative ">
                           <m.span variants={reveal} className="block">All enquiries</m.span>
@@ -120,7 +121,7 @@ export default function Contact() {
                       </div>
                       <div className="w-full md:w-1/2  md:pr-12 xl:pr-24 flex justify-center items-center ">
 
-                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target="_blank" className="inline-block group font-serif text-light-brown relative text-3xl font-normal leading-[1.15] md:leading-[1.2] md:pt-0 pt-16  transition-colors ease-in-out duration-500  group">
+                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target="_blank" className="inline-block group font-serif text-light-brown relative text-3xl font-normal leading-[1.15] md:leading-[1.2] md:pt-0 pb-16  transition-colors ease-in-out duration-500  group">
                           <m.span variants={reveal} className="block">
                             Book a table
 

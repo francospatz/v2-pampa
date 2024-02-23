@@ -1,18 +1,13 @@
+'use client'
 import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
-import Container from '@/components/container'
-import FancyLink from '@/components/fancyLink'
 import { fade, revealNoDelay } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { ThemeContext } from '@/context/theme'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
-import Image from "next/legacy/image"
-import image1 from '../../public/images/03.webp'
 import Div100vh from 'react-div-100vh'
-
-/* import SanityPageService from '../../services/sanityPageService' */
 
 
 export default function Restaurant(initialData) {
@@ -107,20 +102,27 @@ export default function Restaurant(initialData) {
               </m.main>
 
               <m.footer variants={fade} className="p-4 md:p-6 bg-off-white relative w-full flex items-end">
-                <div className="flex flex-wrap w-full">
-                  <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
+                <div className="flex flex-col md:flex-row w-full">
+
+                  <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
 
 
 
-                  <span className="hidden md:block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
-                    <Link legacyBehavior href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
-                  </span>
+                  <div className='flex flex-row md:mr-0 md:ml-auto'>
 
-                  <span className="block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight ml-auto"><Link legacyBehavior href="/contact"><a className="group relative">Contact Us <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link></span>
 
-                  <span className="block w-1/2 md:w-auto text-right md:hidden ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
-                    <Link legacyBehavior href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
-                  </span>
+                    <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
+                      <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target='_blank' className="group relative">Bookings <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a>
+                    </span>
+                    <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
+                      <Link legacyBehavior href="/contact"><a className="group relative">Contact  <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                    </span>
+                    <span className="block w-auto font-sans uppercase text-sm ml-auto  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
+                      <Link legacyBehavior href="/"><a className="group relative">Home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                    </span>
+
+
+                  </div>
                 </div>
               </m.footer>
             </m.div>
@@ -131,12 +133,3 @@ export default function Restaurant(initialData) {
     </Layout>
   )
 }
-
-/* 
-export async function getStaticProps(context) {
-  const cms = await pageService.fetchQuery(context)
-
-  return {
-    props: { ...cms }
-  }
-} */

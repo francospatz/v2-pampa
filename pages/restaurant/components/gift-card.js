@@ -1,3 +1,4 @@
+'use client'
 export default function GiftCard() {
     return (
         <div className="w-11/12 md:w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] md:mx-auto font-serif text-xl xl:text-[22px] leading-tight tracking-tight content md:mt-16 xl:mt-24">

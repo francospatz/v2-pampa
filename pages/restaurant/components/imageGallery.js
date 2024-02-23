@@ -1,0 +1,351 @@
+'use client'
+import {
+    useCallback,
+    useEffect,
+    useRef,
+    useState,
+} from 'react'
+
+import { imagesData } from './imagesData'
+
+const lerp = (a, b, t) => (1 - t) * a + t * b
+
+
+const CARD_FOCUS = 'cardFocus'
+const CARD_UNFOCUS = 'cardUnfocus'
+
+const eventBus = {
+    on(event, callback) {
+        document.addEventListener(event, callback)
+    },
+    dispatch(event, data) {
+        document.dispatchEvent(new CustomEvent(event, { detail: data }))
+    },
+    off(event, callback) {
+        document.removeEventListener(event, callback)
+    },
+}
+
+const useAnimationFrame = (callback, immediate = false) => {
+    const frameRef = useRef()
+    const cancelRef = useRef(false)
+
+    const cancel = useCallback(() => cancelAnimationFrame(frameRef.current), [])
+
+    const start = useCallback(() => {
+        cancelRef.current = false
+        frameRef.current = requestAnimationFrame(animate)
+    }, [])
+
+    const stop = useCallback(() => {
+        cancelRef.current = true
+    }, [])
+
+    const animate = useCallback(time => {
+        if (cancelRef.current) {
+            cancel()
+        } else {
+            start()
+
+            try {
+                callback(time, stop)
+            } catch (e) {
+                console.error('Animation frame error:', e)
+
+                cancel()
+            }
+        }
+    }, [])
+
+    useEffect(() => {
+        immediate && start(0, stop)
+
+        return stop
+    }, [])
+
+    return {
+        frameRef,
+        start,
+        stop,
+    }
+}
+
+const useInterval = (callback, time, delay) => {
+    const intervalRef = useRef()
+
+    const stop = useCallback(() => clearInterval(intervalRef.current), [])
+    const start = useCallback((delay) => {
+        const _start = () => {
+            intervalRef.current = setInterval(callback, time)
+        }
+
+        stop()
+
+        if (+delay > 0) {
+            setTimeout(_start, delay)
+        } else {
+            _start()
+        }
+    }, [])
+
+    useEffect(() => {
+        start(delay)
+
+        return stop
+    }, [])
+
+    return {
+        intervalRef,
+        start,
+        stop,
+    }
+}
+
+
+const classNames = (map) => {
+    return Object.entries(map)
+        .reduce(
+            (classList, [className, enabled]) =>
+                classList.concat(enabled ? ` ${className}` : ''),
+            ''
+        )
+        .trim()
+}
+
+
+
+const Card = ({
+    className,
+    heading,
+    index,
+    imgURLs,
+}) => {
+    const root = useRef()
+    const imgContainer = useRef()
+    const imgChangeInterval = useRef()
+    const hover = useRef(false)
+    const mouseDelta = useRef([0, 0])
+    const targetOffset = useRef([0, 0])
+    const cancelAnimationTimeout = useRef()
+    const imgLoadCount = useRef(0)
+
+    const [imgIndex, setImgIndex] = useState(0)
+    const [isActive, setIsActive] = useState(false)
+    const [isCollapsed, setIsCollapsed] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
+
+    const cardClassNames = classNames({
+        card: true,
+        [className]: !!className,
+        'card--active': isActive,
+        'card--collapse': isCollapsed,
+    })
+
+    const animate = useCallback((time, stop) => {
+        let mouseDeltaX = 0
+        let mouseDeltaY = 0
+
+        if (hover.current) {
+            [mouseDeltaX, mouseDeltaY] = mouseDelta.current
+        }
+
+        targetOffset.current = [
+            lerp(targetOffset.current[0], mouseDeltaX, 0.025),
+            lerp(targetOffset.current[1], mouseDeltaY, 0.025),
+        ]
+
+        imgContainer.current.style.transform =
+            `translateX(${targetOffset.current[0]}%) translateY(${targetOffset.current[1]}%)`
+    }, [])
+
+    const {
+        frameRef,
+        start: startAnimation,
+        stop: stopAnimation,
+    } = useAnimationFrame(animate)
+
+    const onClickCard = useCallback(() => {
+        eventBus.dispatch(CARD_FOCUS, index)
+
+        setIsActive(true)
+    }, [])
+
+    const onClickClose = useCallback((e) => {
+        e.stopPropagation()
+
+        setIsActive(false)
+
+        eventBus.dispatch(CARD_UNFOCUS, index)
+    }, [])
+
+    const onMouseEnter = useCallback(() => {
+        cancelAnimationTimeout.current && clearTimeout(cancelAnimationTimeout.current)
+
+        hover.current = true
+
+        startAnimation()
+    }, [])
+
+    const onMouseMove = useCallback(({ clientX, clientY }) => {
+        const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = root.current
+        const centerX = 0.5 * offsetWidth
+        const centerY = 0.5 * offsetHeight
+
+        mouseDelta.current = [
+            -15 * (clientX - centerX - offsetLeft) / offsetWidth,
+            -15 * (clientY - centerY - offsetTop) / offsetHeight,
+        ]
+    }, [])
+
+    const onMouseLeave = useCallback(() => {
+        hover.current = false
+
+        cancelAnimationTimeout.current = setTimeout(() => {
+            cancelAnimationTimeout.current = null
+
+            stopAnimation()
+        }, 2500)
+    }, [])
+
+    const cycleImgIndex = useCallback((direction = 'forward', reset = false) => {
+        reset && startInterval()
+
+        setImgIndex(currentIndex => {
+            const newIndex = direction === 'forward'
+                ? currentIndex + 1
+                : currentIndex - 1
+
+            return newIndex > imgURLs.length - 1
+                ? 0
+                : newIndex < 0
+                    ? imgURLs.length - 1
+                    : newIndex
+        })
+    }, [])
+
+    const selectImgIndex = useCallback((newIndex, reset = false) => {
+        reset && startInterval()
+
+        setImgIndex(newIndex)
+    }, [])
+
+    const {
+        start: startInterval,
+        stop: stopInterval,
+    } = useInterval(cycleImgIndex, 5000, index * 200)
+
+    useEffect(() => {
+        const onCardFocus = ({ detail }) => {
+            const isInactive = detail !== index
+
+            setIsCollapsed(isInactive)
+            setIsActive(_isActive => {
+                return isInactive && _isActive
+                    ? false
+                    : _isActive
+            })
+
+            isInactive && stopInterval()
+        }
+        const onCardUnfocus = ({ detail }) => {
+            setIsCollapsed(false)
+            startInterval(index * 200)
+        }
+
+        eventBus.on(CARD_FOCUS, onCardFocus)
+        eventBus.on(CARD_UNFOCUS, onCardUnfocus)
+
+        return () => {
+            eventBus.off(CARD_FOCUS, onCardFocus)
+            eventBus.on(CARD_UNFOCUS, onCardUnfocus)
+        }
+    }, [])
+
+    useEffect(() => {
+        const { offsetWidth, offsetHeight } = root.current
+        const { offsetLeft, offsetTop } = root.current
+
+        targetOffset.current = [0, 0]
+    }, [])
+
+    return (
+        <div
+            className={cardClassNames}
+            ref={root}
+            onClick={onClickCard}
+            onMouseEnter={onMouseEnter}
+            onMouseMove={onMouseMove}
+            onMouseLeave={onMouseLeave}
+        >
+            <div
+                className={classNames({
+                    'card__imageContainer': true,
+                    'card__imageContainer--loaded': !isLoading,
+                })}
+                ref={imgContainer}
+            >
+                {imgURLs.map((imgURL, i) => (
+                    <img
+                        className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
+                        src={imgURL}
+                        alt=''
+                        loading='lazy'
+                        onLoad={() => {
+                            imgLoadCount.current++
+
+                            if (imgLoadCount.current === imgURLs.length) setIsLoading(false)
+                        }}
+                        key={i}
+                    />
+                ))}
+            </div>
+
+            <header className="card__header">
+                <div className="card__headingContainer">
+                    <h2 className="card__heading">{heading}</h2>
+
+                </div>
+                <button
+                    className="card__btnClose"
+                    onClick={onClickClose}
+                >
+                    <span className="material-icons card__iconClose">close</span>
+                </button>
+            </header>
+            <footer className="card__footer">
+                <div className="card__controls">
+                    <button
+                        className="card__control ml-2"
+                        onClick={() => cycleImgIndex('backward', true)}
+                    >
+                        prev
+                    </button>
+
+                    <button
+                        className="card__control mr-2"
+                        onClick={() => cycleImgIndex('forward', true)}
+                    >
+                        next
+                    </button>
+                </div>
+            </footer>
+        </div>
+    )
+}
+
+export default function ImageGallery() {
+    return (
+        <div className="gallery flex md:flex-row flex-col pb-[10rem] h-full">
+            {imagesData.map((city, i) => (
+                <Card
+                    className="m-4 z-40 overflow-hidden"
+                    heading={city.name}
+
+                    imgURLs={city.imgURLs}
+                    index={i}
+                    key={i}
+                />
+            ))}
+        </div>
+    )
+}
