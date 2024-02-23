@@ -1,4 +1,5 @@
 'use client'
+import { Suspense } from 'react'
 import Layout from '@/components/layout'
 import { fade, fadeNoDelay } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
@@ -36,8 +37,10 @@ export default function Gallery() {
                                 <LazyMotion features={domAnimation}>
                                     <m.div variants={fade} className="w-full font-serif text-xl xl:text-[22px] leading-tight tracking-tight content flex justify-center h-full">
 
+                                        <Suspense delayMs={1500} fallback={<p>Loading...</p>}>
+                                            <ImageGallery />
+                                        </Suspense>
 
-                                        <ImageGallery />
 
 
                                     </m.div>

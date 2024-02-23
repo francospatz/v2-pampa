@@ -323,22 +323,22 @@ const Card = ({
                 ref={imgContainer}
             >
                 {imgURLs.map((imgURL, i) => (
-                    <Suspense fallback={<p>Loading...</p>}>
-                        <Image
-                            className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
-                            src={imgURL}
-                            alt=''
-                            width={1000}
-                            height={1000}
 
-                            onLoad={() => {
-                                imgLoadCount.current++
+                    <Image
+                        className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
+                        src={imgURL}
+                        alt=''
+                        width={1000}
+                        height={1000}
 
-                                if (imgLoadCount.current === imgURLs.length) setIsLoading(false)
-                            }}
-                            key={i}
-                        />
-                    </Suspense>
+                        onLoad={() => {
+                            imgLoadCount.current++
+
+                            if (imgLoadCount.current === imgURLs.length) setIsLoading(false)
+                        }}
+                        key={i}
+                    />
+
                 ))}
             </div>
             <header className="card__header">
