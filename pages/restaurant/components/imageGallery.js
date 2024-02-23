@@ -155,26 +155,6 @@ const classNames = (map) => {
         .trim()
 }
 
-const Loader = ({
-    className,
-    isVisible,
-}) => {
-    const loaderClassNames = classNames({
-        loader: true,
-        'loader--visible': isVisible,
-        [className]: !!className,
-    })
-
-    return (
-        <span className={loaderClassNames}>
-            <span className="loader__bar"></span>
-            <span className="loader__bar"></span>
-            <span className="loader__bar"></span>
-            <span className="loader__bar"></span>
-            <span className="loader__bar"></span>
-        </span>
-    )
-}
 
 const Card = ({
     className,
@@ -361,10 +341,6 @@ const Card = ({
                     </Suspense>
                 ))}
             </div>
-            <Loader
-                isVisible={isLoading}
-                className="card__loader"
-            />
             <header className="card__header">
                 <div className="card__headingContainer">
                     <h2 className="card__heading">{heading}</h2>
