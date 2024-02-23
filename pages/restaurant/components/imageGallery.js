@@ -17,6 +17,13 @@ const imagesData = [
             '/images/gallery/restaurant/2.webp',
             '/images/gallery/restaurant/3.webp',
             '/images/gallery/restaurant/4.webp',
+            '/images/gallery/restaurant/5.webp',
+            '/images/gallery/restaurant/6.webp',
+            '/images/gallery/restaurant/7.webp',
+            '/images/gallery/restaurant/8.webp',
+            '/images/gallery/restaurant/9.webp',
+            '/images/gallery/restaurant/10.webp',
+
         ],
     },
     {
@@ -32,6 +39,11 @@ const imagesData = [
             '/images/gallery/food/7.webp',
             '/images/gallery/food/8.webp',
             '/images/gallery/food/9.webp',
+            '/images/gallery/food/10.webp',
+            '/images/gallery/food/11.webp',
+            '/images/gallery/food/12.webp',
+            '/images/gallery/food/13.webp',
+            '/images/gallery/food/14.webp',
 
         ],
     },
@@ -47,6 +59,12 @@ const imagesData = [
             '/images/gallery/team/6.webp',
             '/images/gallery/team/7.webp',
             '/images/gallery/team/8.webp',
+            '/images/gallery/team/9.webp',
+            '/images/gallery/team/10.webp',
+            '/images/gallery/team/11.webp',
+            '/images/gallery/team/12.webp',
+            '/images/gallery/team/13.webp',
+            '/images/gallery/team/14.webp',
         ],
     },
 ]
