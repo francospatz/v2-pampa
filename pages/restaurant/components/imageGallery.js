@@ -330,7 +330,7 @@ const Card = ({
                         className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
                         src={imgURL}
                         alt=''
-                        loading='lazy'
+
                         onLoad={() => {
                             imgLoadCount.current++
 

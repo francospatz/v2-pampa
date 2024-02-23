@@ -42,7 +42,7 @@ module.exports = {
         },
       },
       colors: {
-        'black': '#000000',
+        'black': '#0d0d0d',
         'white': '#FFFFFF',
         'off-white': '#FCF9F0',
         'light-brown': '#242423',
