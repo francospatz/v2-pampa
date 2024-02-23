@@ -376,7 +376,7 @@ const Card = ({
 
 export default function ImageGallery() {
     return (
-        <div className="gallery flex md:flex-row flex-col pb-[10rem] pt-0 h-full">
+        <div className="gallery flex md:flex-row flex-col pt-0 h-full">
             {imagesData.map((city, i) => (
 
                 <Card
