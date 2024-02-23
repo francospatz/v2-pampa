@@ -380,7 +380,7 @@ export default function ImageGallery() {
             {imagesData.map((city, i) => (
 
                 <Card
-                    className="m-4 z-40 overflow-hidden"
+                    className="z-40 overflow-hidden"
                     heading={city.name}
 
                     imgURLs={city.imgURLs}

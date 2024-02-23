@@ -221,7 +221,7 @@
   height: 600px;
   left: 0;
   overflow: hidden;
-
+  margin: 5px 10px 5px 0;
   position: relative;
   top: 0;
   transition: box-shadow 1s, height 1.5s, margin 1s, transform 1.25s, width 1.5s;
@@ -230,6 +230,10 @@
   @media (max-width: 400px) {
     width: 100%;
     height: 70vmin;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
   }
 
   &:hover {
@@ -243,10 +247,15 @@
 
   &--active {
     box-shadow: 0 0.725rem 1.25rem -0.725rem rgba(0, 10, 20, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
     cursor: default;
     height: 100%;
     margin: 0;
-    width: 80%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     @media (max-width: 960px) {
       width: 100%;
     }
