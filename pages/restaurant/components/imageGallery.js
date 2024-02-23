@@ -5,6 +5,7 @@ import {
     useRef,
     useState,
 } from 'react'
+import Image from 'next/image'
 
 const imagesData = [
     {
@@ -283,11 +284,7 @@ const Card = ({
         })
     }, [])
 
-    const selectImgIndex = useCallback((newIndex, reset = false) => {
-        reset && startInterval()
 
-        setImgIndex(newIndex)
-    }, [])
 
     const {
         start: startInterval,
@@ -345,10 +342,12 @@ const Card = ({
                 ref={imgContainer}
             >
                 {imgURLs.map((imgURL, i) => (
-                    <img
+                    <Image
                         className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
                         src={imgURL}
                         alt=''
+                        width={2000}
+                        height={2000}
 
                         onLoad={() => {
                             imgLoadCount.current++
