@@ -95,7 +95,6 @@ export default function Restaurant(initialData) {
                             )
                           })}
                       </ul>
-
                     </div>
                   </div>
                 </article>

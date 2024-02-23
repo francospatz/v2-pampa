@@ -155,328 +155,46 @@
 }
 
 .gallery {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-  width: 100%;
-}
-
-.loader {
-  display: inline-block;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 1s;
-  will-change: opacity;
-
-  &--visible {
-    opacity: 1;
-  }
-
-  &__bar {
-    animation: loaderBar 2s ease-in-out alternate infinite;
-    background-color: black;
-    display: block;
-    height: 0.25rem;
-    margin-bottom: 0.25rem;
-    transform: translateX(-100%);
-    width: 2rem;
-
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        animation-delay: $i * 0.1s;
-      }
-    }
-  }
-}
-
-@keyframes loaderBar {
-  0% {
-    transform: scaleX(0);
-    transform-origin: 0 0;
-  }
-
-  50% {
-    transform: scaleX(1);
-    transform-origin: 0 0;
-  }
-
-  50.05% {
-    transform-origin: 100% 100%;
-  }
-
-  100% {
-    transform: scaleX(0);
-    transform-origin: 100% 100%;
-  }
-}
-
-.card {
-  box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 10, 20, 0.35);
-  box-sizing: border-box;
-  cursor: pointer;
-  display: inline-block;
-  height: 600px;
-  left: 0;
-  overflow: hidden;
-  margin: 5px 15px 15px 0;
+  height: 175vh;
   position: relative;
-  top: 0;
-  transition: box-shadow 1s, height 0.5s, margin 1s, transform 1.25s, width 0.5s;
-  width: 400px;
-  will-change: box-shadow, height, margin, transform, width;
-  @media (max-width: 770px) {
-    width: 100%;
-    height: 20%;
-    padding-top: 15px;
-    margin: 20px 15px 20px 15px;
-    &:last-of-type {
-      margin-left: 0;
-    }
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  &:hover {
-    box-shadow: 0 0.725rem 1.25rem -0.725rem rgba(0, 10, 20, 0.8);
-    transform: scale(1.05);
-  }
-
-  &:hover &__image {
-    transform: translateX(-12.5%) translateY(-7.5%) scale(1);
-  }
-
-  &--active {
-    box-shadow: 0 0.725rem 1.25rem -0.725rem rgba(0, 10, 20, 0.65);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: default;
+  display: flex;
+  gap: 2vw;
+  padding: 2vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  .column {
+    position: relative;
     height: 100%;
-    margin: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    @media (max-width: 960px) {
-      width: 100%;
-    }
-
-    &:hover {
-      box-shadow: 0 0.725rem 1.25rem -0.725rem rgba(0, 10, 20, 0.65);
-      transform: scale(1);
-    }
-  }
-
-  &--active &__header,
-  &--active &__btnClose,
-  &--active &__footer,
-  &--active &__header:before,
-  &:hover &__header,
-  &:hover &__header:before {
-    opacity: 1;
-  }
-
-  &--active &__header,
-  &--active &__heading,
-  &--active &__subHeading,
-  &--active &__footer,
-  &:hover &__header,
-  &:hover &__heading,
-  &:hover &__subHeading {
-    transform: translateX(0);
-  }
-
-  &:hover &__header:before,
-  &--active &__header:before {
-    transform: skew(-15deg) translateX(0);
-  }
-
-  &--active &__footer,
-  &--active &__btnClose {
-    pointer-events: auto;
-    transition-delay: 0.5s;
-  }
-
-  &--collapse {
-    height: 0;
-    margin: 0;
-    width: 0;
-    transform: scale(0);
-  }
-
-  &__header {
-    align-items: center;
-    display: inline-flex;
-    width: 100%;
-    left: 0;
-    opacity: 1;
-    padding: 0rem 0.8rem 1rem 1rem;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    transform: translateX(-0.5rem);
-    transition: opacity 1s, transform 1s;
-    will-change: opacity, transform;
-
-    &:before {
-      background: transparent;
-      content: "";
-      display: block;
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      transform: skew(-15deg) translateX(-2rem);
-      transform-origin: 0 0;
-      transition: opacity 1s, transform 1s;
-      transition-delay: 0.3s;
-      width: 100%;
-      will-change: opacity, transform;
-    }
-  }
-
-  &__headingContainer {
-    margin-right: 2rem;
-  }
-
-  &__heading {
-    position: relative;
-    margin-left: 2rem;
-    color: #fcf9f0;
-    font-size: 5vmin;
-  }
-
-  &__btnClose {
-    border: 0;
-    cursor: pointer;
-    background-color: transparent;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s;
-    will-change: opacity;
-    margin-left: auto;
-
-    margin-bottom: 8vmin;
-
-    &:active {
-      transform: scale(0.9);
-    }
-  }
-
-  &__iconClose {
-    color: #fcf9f0;
-    display: block;
-    font-size: 1.25rem;
-  }
-
-  &__imageContainer {
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: relative;
-    top: 0;
-    transform-origin: 50% 50%;
-    transition: opacity 1s;
-    width: 100%;
-    will-change: opacity, transform;
-    background-color: #fcf9f0;
-
-    &--loaded {
-      opacity: 1;
-    }
-  }
-
-  &__image {
-    display: block;
-    height: 115%;
-    left: 0;
-    object-fit: cover;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-
-    transform: translateX(-12.5%) translateY(-7.5%);
-    transform-origin: 50% 50%;
-    transition: opacity 1s, transform 1s;
-    width: 125%;
-    will-change: opacity, transform;
-    max-width: unset;
-    &--visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-
-  &--collapse &__imageContainer {
-    opacity: 0;
-  }
-
-  &__footer {
-    opacity: 0;
-    top: 47%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    pointer-events: none;
-    position: absolute;
-
-    transition: opacity 1s;
-    will-change: opacity;
-    width: 100%;
-
-    &:before {
-      background: transparent;
-      content: "";
-      display: block;
-      height: 100%;
-      position: absolute;
-
-      top: 0;
-
-      width: 100%;
-    }
-  }
-
-  &__controls {
+    width: 25%;
+    min-width: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    width: 100%;
-  }
+    flex-direction: column;
+    gap: 2vw;
+    .imageContainer {
+      height: 100%;
+      width: auto;
+      position: relative;
+      min-height: 20%;
 
-  &__control {
-    background-color: transparent;
-    border: 0;
-    color: #fcf9f0;
-    cursor: pointer;
-
-    padding: 0;
-    position: relative;
-
-    &--arrow {
-      color: #fcf9f0;
-      font-size: 0.5rem;
-      height: 1.5rem;
-      line-height: 0.25rem;
-      text-align: center;
-      top: 50%;
-      width: 1.5rem;
-
-      &:active {
-        transform: scale(0.95);
+      img {
+        object-fit: cover;
+        min-width: 0;
       }
     }
+    &:nth-of-type(1) {
+      top: -45%;
+    }
+    &:nth-of-type(2) {
+      top: -95%;
+    }
+    &:nth-of-type(3) {
+      top: -45%;
+    }
+    &:nth-of-type(4) {
+      top: -75%;
+    }
   }
-
-  &__iconControl {
-    font-size: 1.25rem;
-  }
+}
+.spacer {
+  height: 100vh;
 }

@@ -13,7 +13,8 @@ import image2 from '../public/images/02.webp'
 import image3 from '../public/images/04.webp'
 import image4 from '../public/images/05.webp'
 import image5 from '../public/images/06.webp'
-import { Lenis } from '@studio-freight/react-lenis'
+import { ReactLenis } from '@studio-freight/react-lenis'
+
 
 
 const introEnd = {
@@ -48,7 +49,7 @@ export default function App({ Component, pageProps }) {
   let colorThemes = ['bg-off-white text-light-brown'];
 
   return (
-    <Lenis root>
+    <ReactLenis root>
       <DefaultSeo {...SEO} />
       <div className="grain fixed w-full  inset-0 pointer-events-none z-[10000]"></div>
 
@@ -246,6 +247,6 @@ export default function App({ Component, pageProps }) {
           </AnimatePresence>
         </ThemeContext.Provider>
       </IntroContext.Provider>
-    </Lenis>
+    </ReactLenis>
   )
 }
