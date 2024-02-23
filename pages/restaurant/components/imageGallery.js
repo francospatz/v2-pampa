@@ -317,7 +317,8 @@ const Card = ({
         >
             <div
                 className={classNames({
-                    'card__imageContainer': true
+                    'card__imageContainer': true,
+                    'card__imageContainer--loaded': !isLoading,
                 })}
                 ref={imgContainer}
             >
@@ -329,7 +330,7 @@ const Card = ({
                         alt=''
                         width={2000}
                         height={2000}
-
+                        loading='lazy'
                         onLoad={() => {
                             imgLoadCount.current++
 
