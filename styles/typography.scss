@@ -363,17 +363,13 @@
   &__imageContainer {
     height: 100%;
     left: 0;
-    opacity: 0;
+    opacity: 1;
     position: relative;
     top: 0;
     transform-origin: 50% 50%;
     transition: opacity 1s;
     width: 100%;
     will-change: opacity, transform;
-
-    &--loaded {
-      opacity: 1;
-    }
   }
 
   &__image {

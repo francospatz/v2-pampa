@@ -317,28 +317,27 @@ const Card = ({
         >
             <div
                 className={classNames({
-                    'card__imageContainer': true,
-                    'card__imageContainer--loaded': !isLoading,
+                    'card__imageContainer': true
                 })}
                 ref={imgContainer}
             >
                 {imgURLs.map((imgURL, i) => (
-                    <Suspense fallback={''}>
-                        <Image
-                            className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
-                            src={imgURL}
-                            alt=''
-                            width={2000}
-                            height={2000}
 
-                            onLoad={() => {
-                                imgLoadCount.current++
+                    <Image
+                        className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
+                        src={imgURL}
+                        alt=''
+                        width={2000}
+                        height={2000}
 
-                                if (imgLoadCount.current === imgURLs.length) setIsLoading(false)
-                            }}
-                            key={i}
-                        />
-                    </Suspense>
+                        onLoad={() => {
+                            imgLoadCount.current++
+
+                            if (imgLoadCount.current === imgURLs.length) setIsLoading(false)
+                        }}
+                        key={i}
+                    />
+
                 ))}
             </div>
             <header className="card__header">
@@ -378,16 +377,16 @@ export default function ImageGallery() {
     return (
         <div className="gallery flex md:flex-row flex-col pb-[10rem] pt-0 h-full">
             {imagesData.map((city, i) => (
-                <Suspense fallback={''}>
-                    <Card
-                        className="m-4 z-40 overflow-hidden"
-                        heading={city.name}
 
-                        imgURLs={city.imgURLs}
-                        index={i}
-                        key={i}
-                    />
-                </Suspense>
+                <Card
+                    className="m-4 z-40 overflow-hidden"
+                    heading={city.name}
+
+                    imgURLs={city.imgURLs}
+                    index={i}
+                    key={i}
+                />
+
             ))}
         </div>
     )
