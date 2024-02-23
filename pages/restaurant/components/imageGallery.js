@@ -309,7 +309,7 @@ const Card = ({
                     className="card__btnClose"
                     onClick={onClickClose}
                 >
-                    <span className="material-icons card__iconClose">close</span>
+                    <span className="material-icons card__iconClose pt-2"><svg viewBox="0 0 21 21" fill="currentColor" height="2em" width="2em"><path d="m15.5 15.5-10-10zm0-10-10 10" fill="none" stroke="currentColor" /></svg></span>
                 </button>
             </header>
             <footer className="card__footer">
@@ -318,14 +318,14 @@ const Card = ({
                         className="card__control ml-2"
                         onClick={() => cycleImgIndex('backward', true)}
                     >
-                        prev
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.56 121.56" className='fill-off-white size-10'><path d="M60.56 0C43.83 21.53 24.8 42.7 6.31 62.82v-4.08c18.77 20.34 37.23 40.98 54.25 62.82-15.44-13.9-30.01-28.71-44.42-43.65C10.71 72.26 5.34 66.51 0 60.77c.45-.49 15.13-16.02 16.15-17.11C30.56 28.71 45.13 13.91 60.56 0" /></svg>
                     </button>
 
                     <button
                         className="card__control mr-2"
                         onClick={() => cycleImgIndex('forward', true)}
                     >
-                        next
+                        <svg className='fill-off-white size-10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.56 121.56"><path d="M0 0c15.43 13.91 30 28.71 44.41 43.66 1.06 1.11 15.64 16.59 16.15 17.11-5.34 5.74-10.71 11.49-16.14 17.14C30.01 92.86 15.44 107.66 0 121.56c17.02-21.84 35.49-42.48 54.25-62.82v4.08C35.75 42.69 16.75 21.55 0 0" /></svg>
                     </button>
                 </div>
             </footer>
