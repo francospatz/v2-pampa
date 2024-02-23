@@ -4,6 +4,7 @@ import {
     useEffect,
     useRef,
     useState,
+    Suspense
 } from 'react'
 import Image from 'next/image'
 
@@ -342,20 +343,22 @@ const Card = ({
                 ref={imgContainer}
             >
                 {imgURLs.map((imgURL, i) => (
-                    <Image
-                        className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
-                        src={imgURL}
-                        alt=''
-                        width={2000}
-                        height={2000}
+                    <Suspense fallback={''}>
+                        <Image
+                            className={`card__image${i === imgIndex ? ' card__image--visible' : ''}`}
+                            src={imgURL}
+                            alt=''
+                            width={2000}
+                            height={2000}
 
-                        onLoad={() => {
-                            imgLoadCount.current++
+                            onLoad={() => {
+                                imgLoadCount.current++
 
-                            if (imgLoadCount.current === imgURLs.length) setIsLoading(false)
-                        }}
-                        key={i}
-                    />
+                                if (imgLoadCount.current === imgURLs.length) setIsLoading(false)
+                            }}
+                            key={i}
+                        />
+                    </Suspense>
                 ))}
             </div>
             <Loader
@@ -399,14 +402,16 @@ export default function ImageGallery() {
     return (
         <div className="gallery flex md:flex-row flex-col pb-[10rem] pt-0 h-full">
             {imagesData.map((city, i) => (
-                <Card
-                    className="m-4 z-40 overflow-hidden"
-                    heading={city.name}
+                <Suspense fallback={''}>
+                    <Card
+                        className="m-4 z-40 overflow-hidden"
+                        heading={city.name}
 
-                    imgURLs={city.imgURLs}
-                    index={i}
-                    key={i}
-                />
+                        imgURLs={city.imgURLs}
+                        index={i}
+                        key={i}
+                    />
+                </Suspense>
             ))}
         </div>
     )
