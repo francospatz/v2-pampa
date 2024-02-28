@@ -100,7 +100,7 @@ export default function ImageGallery() {
                     </motion.div>
                 </AnimatePresence>
             </div>
-            <ThumbnailRow images={images}
+            <ThumbnailRow images={images && images}
                 selectedImage={imageIndex}
                 onThumbnailClick={handleThumbnailClick}></ThumbnailRow>
         </div>

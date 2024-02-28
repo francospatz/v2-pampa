@@ -104,7 +104,7 @@ const ThumbnailRow = ({ images, selectedImage, onThumbnailClick }) => {
             onTouchEnd={onTouchEnd}
             style={{ cursor: 'grab' }}
         >
-            {images && images.map((image, index) => (
+            {typeof window && images && images.map((image, index) => (
                 <button key={index} onClick={() => handleClick(index)} className="flex-none">
                     <div className="w-[100px] h-[100px] relative">
                         <Image
