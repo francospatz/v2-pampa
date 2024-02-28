@@ -94,7 +94,7 @@ const ThumbnailRow = ({ images, selectedImage, onThumbnailClick }) => {
     return (
         <div
             ref={scrollRef}
-            className="flex overflow-x-auto scrollbar-hide w-full fixed bottom-1"
+            className="flex overflow-x-auto scrollbar-hide w-full fixed bottom-0"
             onMouseDown={onMouseDown}
             onMouseMove={onMouseMove}
             onMouseUp={onMouseUp}
@@ -104,17 +104,16 @@ const ThumbnailRow = ({ images, selectedImage, onThumbnailClick }) => {
             onTouchEnd={onTouchEnd}
             style={{ cursor: 'grab' }}
         >
-            {images && images.map((image, index) => (
-                <button key={index} onClick={() => handleClick(index)} className="flex-none p-1">
+            {images.map((image, index) => (
+                <button key={index} onClick={() => handleClick(index)} className="flex-none">
                     <div className="w-[100px] h-[100px] relative">
                         <Image
                             src={image.src}
-                            width={100}
-                            height={100}
-
+                            layout="fill"
+                            objectFit="cover"
                             sizes="100px"
                             draggable="false"
-                            className={`object-cover`}
+                            className={`p-1`}
                             alt="Image"
                         />
                     </div>
