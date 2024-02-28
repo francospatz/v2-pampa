@@ -114,6 +114,7 @@ const ThumbnailRow = ({ images, selectedImage, onThumbnailClick }) => {
                             sizes="100px"
                             draggable="false"
                             className={`p-1`}
+                            alt="Image"
                         />
                     </div>
                 </button>
