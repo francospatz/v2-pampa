@@ -1,8 +1,10 @@
 'use client'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import ThumbnailRow from './thumbnailRow'
+
+import { Navigation, Thumbs } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 const images = [
@@ -22,28 +24,85 @@ const images = [
     { width: 600, height: 400, src: '/images/gallery/restaurant/6.webp' },
     { width: 600, height: 400, src: '/images/gallery/restaurant/7.webp' },
     { width: 600, height: 400, src: '/images/gallery/restaurant/8.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/1.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/2.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/3.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/4.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/5.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/6.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/7.webp' },
-    { width: 400, height: 600, src: '/images/gallery/food/8.webp' },
-    { width: 400, height: 600, src: '/images/gallery/restaurant/1.webp' },
-    { width: 400, height: 600, src: '/images/gallery/restaurant/2.webp' },
-    { width: 400, height: 600, src: '/images/gallery/restaurant/3.webp' },
-    { width: 400, height: 600, src: '/images/gallery/restaurant/4.webp' },
-    { width: 400, height: 600, src: '/images/gallery/restaurant/5.webp' },
-    { width: 600, height: 400, src: '/images/gallery/restaurant/6.webp' },
-    { width: 600, height: 400, src: '/images/gallery/restaurant/7.webp' },
-    { width: 600, height: 400, src: '/images/gallery/restaurant/8.webp' },
+
 
 ];
 
 
 export default function ImageGallery() {
-    const [[page, direction], setPage] = useState([0, 0]);
+    const [activeThumb, setActiveThumb] = useState(null);
+
+    const swiperRef = useRef()
+
+    /* const handleClick = (i) => {
+        swiperRef.current.swiper.slideTo(i);
+    } */
+
+    return (
+        <section className="pt-[2rem]">
+            <div className="lg:mx-auto max-w-5xl mx-[1.5rem]">
+                <h1 className="text-[3rem] font-bold  mb-[2rem] text-center">
+                    GALLERY
+                </h1>
+                {images && <div className="">
+                    <Swiper
+                        modules={[Navigation, Thumbs]}
+                        loop={true}
+                        slidesPerView={1}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        grabCursor={true}
+                        navigation={true}
+                        thumbs={{
+                            swiper:
+                                activeThumb && !activeThumb.destroyed ? activeThumb : null,
+                        }}
+                        className="thumbShow"
+                        ref={swiperRef}
+                    >
+                        {images.map((item, index) => {
+                            return (
+                                <SwiperSlide key={index} className='object-center'>
+                                    <Image src={item.src} width={item.width} height={item.height} alt="images" layout="intrinsic"
+                                        objectFit="contain"
+                                        priority={true}
+                                        className='z-[10001] object-center' />
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper>
+                    <Swiper
+                        onSwiper={setActiveThumb}
+                        loop={true}
+                        grabCursor={true}
+                        spaceBetween={10}
+                        slidesPerView={4}
+
+                        modules={[Navigation, Thumbs]}
+                        className="thumbBtn mt-5"
+                    >
+                        {images.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="width-[100px] height-[100px] thumbContainer"
+                                    /* onClick={() => handleClick(index)} */>
+                                    <Image src={item.src} width={item.width} height={item.height} alt="images" layout="cover"
+                                        objectFit="contain"
+                                        priority={true}
+                                        sizes='100px' />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>}
+            </div>
+        </section>
+    );
+}
+
+
+
+/* const [[page, direction], setPage] = useState([0, 0]);
     const imageIndex = (page + images.length) % images.length;
 
     const paginate = (newDirection) => {
@@ -55,61 +114,56 @@ export default function ImageGallery() {
 
     return (
         <div className="flex flex-col items-center justify-center h-full">
-            <h1 className=" fixed top-0 text-4xl font-bold mt-5 pt-2">GALLERY</h1>
-
-            <div className="relative w-[80vw] max-w-4xl mx-auto h-[70vw] max-h-4xl mb-14"> {/* Container size is fixed */}
-                {/* Left arrow */}
-                <button
-                    className="absolute inset-y-0 left-0 z-20 m-2 text-xl p-2 z-[10002]"
-                    onClick={() => paginate(-1)}
+        <h1 className=" fixed top-0 text-4xl font-bold mt-5 pt-2">GALLERY</h1>
+        
+        <div className="relative w-[80vw] max-w-4xl mx-auto h-[70vw] max-h-4xl mb-14"> 
+            
+            <button
+                className="absolute inset-y-0 left-0 z-20 m-2 text-xl p-2 z-[10002]"
+                onClick={() => paginate(-1)}
+            >
+                &#8592; 
+            </button>
+            
+            <button
+                className="absolute inset-y-0 right-0 z-20 m-2 text-xl p-2 z-[10002]"
+                onClick={() => paginate(1)}
+            >
+                &#8594; 
+            </button>
+            <AnimatePresence initial={false} custom={direction}>
+                <motion.div
+                    key={page}
+                    custom={direction}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                        opacity: {
+                            duration: 0.5,
+                            
+                        }
+                    }}
+                    className="absolute inset-0 flex justify-center items-center" 
                 >
-                    &#8592; {/* Unicode left arrow */}
-                </button>
-                {/* Right arrow */}
-                <button
-                    className="absolute inset-y-0 right-0 z-20 m-2 text-xl p-2 z-[10002]"
-                    onClick={() => paginate(1)}
-                >
-                    &#8594; {/* Unicode right arrow */}
-                </button>
-                <AnimatePresence initial={false} custom={direction}>
-                    <motion.div
-                        key={page}
-                        custom={direction}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{
-                            opacity: {
-                                duration: 0.5,
-                                // No delay needed as we want an immediate transition
-                            }
-                        }}
-                        className="absolute inset-0 flex justify-center items-center" // Positioned absolutely to overlap
-                    >
-                        <Image
-                            src={images[imageIndex].src}
-                            width={images[imageIndex].width}
-                            height={images[imageIndex].height}
-                            alt={`Image ${imageIndex}`}
-                            layout="intrinsic" // Image will fill the container
-                            objectFit="contain" // Image will keep its aspect ratio
-                            priority={true} // Ensures the image is preloaded
-                            className='z-[10001]'
-                        />
-                    </motion.div>
-                </AnimatePresence>
-            </div>
-            <ThumbnailRow images={images && images}
-                selectedImage={imageIndex}
-                onThumbnailClick={handleThumbnailClick}></ThumbnailRow>
+                    <Image
+                        src={images[imageIndex].src}
+                        width={images[imageIndex].width}
+                        height={images[imageIndex].height}
+                        alt={`Image ${imageIndex}`}
+                        layout="intrinsic" 
+                        objectFit="contain" 
+                        priority={true} 
+                        className='z-[10001]'
+                    />
+                </motion.div>
+            </AnimatePresence>
         </div>
-    );
-}
-
-
-
-
+        <ThumbnailRow images={images && images}
+            selectedImage={imageIndex}
+            onThumbnailClick={handleThumbnailClick}></ThumbnailRow>
+        </div>
+    ); */
 
 
 {/* <div className="w-[20rem] fixed top-0 mt-5">
