@@ -112,7 +112,7 @@ const ThumbnailRow = ({ images, selectedImage, onThumbnailClick }) => {
                             layout="fill"
                             objectFit="cover"
                             sizes="100px"
-                            draggable="false"
+                            draggable={false}
                             className={`p-1`}
                             alt="Image"
                         />
