@@ -156,6 +156,7 @@
 
 .gallery {
   height: 175vh;
+  width: 100%;
   position: relative;
   display: flex;
   gap: 2vw;
@@ -204,12 +205,16 @@
   --swiper-navigation-color: rgb(0, 0, 0);
 }
 
-.carousel .swiper-wrapper,
+.swipper-wrapper {
+  height: auto;
+}
+
+/* .carousel .swiper-wrapper,
 .preview .swiper-wrapper,
 .breakpoint .swiper-wrapper,
 .coverflow .swiper-wrapper {
   padding-bottom: 3rem;
-}
+} */
 
 /* rewind */
 .fade,
@@ -370,12 +375,17 @@
 
   object-position: center;
 }
-
+/*
 .thumbShow .swipper-wrapper img {
   object-position: center;
+} */
+
+.thumbBtn .swiper-slide {
+  width: 100px;
+  height: 100px;
 }
 
-/* .thumbBtn .thumbContainer {
-  width: 200px;
-  height: 200px;
-} */
+.thumbContainer {
+  width: 100px;
+  height: 100px;
+}

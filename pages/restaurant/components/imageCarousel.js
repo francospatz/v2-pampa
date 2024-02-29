@@ -1,10 +1,10 @@
 'use client'
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Navigation, Thumbs } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 
 
 const images = [
@@ -30,73 +30,72 @@ const images = [
 
 
 export default function ImageGallery() {
-    const [activeThumb, setActiveThumb] = useState(null);
-
-    const swiperRef = useRef()
-
-    /* const handleClick = (i) => {
+    const swiperRef = useRef(null);
+    const handleChange = (i) => {
         swiperRef.current.swiper.slideTo(i);
+    };
+
+    /* const handleThumbnailClick = (index) => {
+        swiperRef.current.toswiper.
     } */
 
     return (
-        <section className="pt-[2rem]">
-            <div className="lg:mx-auto max-w-5xl mx-[1.5rem]">
-                <h1 className="text-[3rem] font-bold  mb-[2rem] text-center">
-                    GALLERY
-                </h1>
-                {images && <div className="">
-                    <Swiper
-                        modules={[Navigation, Thumbs]}
-                        loop={true}
-                        slidesPerView={1}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        grabCursor={true}
-                        navigation={true}
-                        thumbs={{
-                            swiper:
-                                activeThumb && !activeThumb.destroyed ? activeThumb : null,
-                        }}
-                        className="thumbShow"
-                        ref={swiperRef}
-                    >
-                        {images.map((item, index) => {
-                            return (
-                                <SwiperSlide key={index} className='object-center'>
-                                    <Image src={item.src} width={item.width} height={item.height} alt="images" layout="intrinsic"
-                                        objectFit="contain"
-                                        priority={true}
-                                        className='z-[10001] object-center' />
-                                </SwiperSlide>
-                            );
-                        })}
-                    </Swiper>
-                    <Swiper
-                        onSwiper={setActiveThumb}
-                        loop={true}
-                        grabCursor={true}
-                        spaceBetween={10}
-                        slidesPerView={4}
+        <>
+            {images && <div className="h-full w-full md:w-4/5">
+                <Swiper
+                    modules={[Navigation]}
+                    loop={true}
+                    slidesPerView={1}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    grabCursor={true}
+                    navigation={true}
 
-                        modules={[Navigation, Thumbs]}
-                        className="thumbBtn mt-5"
-                    >
-                        {images.map((item, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="width-[100px] height-[100px] thumbContainer"
-                                    /* onClick={() => handleClick(index)} */>
-                                    <Image src={item.src} width={item.width} height={item.height} alt="images" layout="cover"
-                                        objectFit="contain"
-                                        priority={true}
-                                        sizes='100px' />
-                                </div>
+                    className="thumbShow h-[74%] mb-2 mt-6"
+                    ref={swiperRef}
+                >
+                    {images.map((item, index) => {
+                        return (
+                            <SwiperSlide key={index} className='object-center'>
+                                <Image
+                                    src={item.src}
+                                    fill
+                                    alt="images"
+
+
+                                    priority={true}
+                                    className='z-[10001] object-center big-image object-contain' />
                             </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>}
-            </div>
-        </section>
+                        );
+                    })}
+                </Swiper>
+                <Swiper
+
+                    loop={true}
+                    grabCursor={true}
+                    spaceBetween={10}
+                    slidesPerView={'auto'}
+                    freeMode={{ enabled: true, momentum: true, momentumRatio: 1.5, sticky: true }}
+                    modules={[Navigation, Thumbs, FreeMode]}
+                    className="thumbBtn h-[20%]"
+                >
+                    {images.map((item, index) => (
+                        <SwiperSlide key={index}
+                            onClick={() => handleChange(index)}>
+                            <div className="thumbContainer"
+                            >
+                                <Image src={item.src} alt="images"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    priority={true}
+                                    sizes='100px' />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>}
+        </>
     );
 }
 
