@@ -1,6 +1,6 @@
 export default {
   defaultTitle: 'Pampa Grill | Malaga',
-  description: 'Hello, we are Pampa Grill, a gourmet Argentine grill restaurant located in Malaga, Spain.',
+  description: 'We are Pampa Grill, a gourmet Argentine grill restaurant located in Malaga, Spain.',
   titleTemplate: '%s | Pampa Grill',
   openGraph: {
     type: 'website',
