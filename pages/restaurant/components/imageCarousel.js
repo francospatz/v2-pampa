@@ -53,7 +53,7 @@ export default function ImageGallery() {
                     grabCursor={true}
                     navigation={true}
 
-                    className="thumbShow h-[60vh] mb-2 mt-0 sm:mt-6"
+                    className="thumbShow h-[60vh] mb-2 mt-0"
                     ref={swiperRef}
                 >
                     {images.map((item, index) => {
