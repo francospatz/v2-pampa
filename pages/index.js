@@ -6,9 +6,9 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import { IntroContext } from '@/context/intro'
 import { ThemeContext } from '@/context/theme'
+import { LangContext } from '@/context/lang'
 import Link from 'next/link'
 import Image from "next/legacy/image"
-
 import image1 from '../public/images/01.webp'
 import image2 from '../public/images/02.webp'
 import image3 from '../public/images/04.webp'
@@ -17,13 +17,20 @@ import image5 from '../public/images/06.webp'
 import Div100vh from 'react-div-100vh'
 
 
-
 export default function Home() {
   <NextSeo title="Pampa Grill" />
   const containerRef = useRef(null)
 
   const [introContext, setIntroContext] = useContext(IntroContext);
   const [themeContext, setThemeContext] = useContext(ThemeContext);
+  const [langContext, setLangContext] = useContext(LangContext);
+
+  const handleLangChange = () => {
+    langContext === 'es' ? setLangContext('en') : setLangContext('es');
+    console.log(langContext);
+  }
+
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -477,7 +484,7 @@ export default function Home() {
                       <span className="block overflow-hidden">
                         <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                           <span className="block translate-y-[-8px]">
-                            The art of
+                            {langContext === 'es' ? 'El arte de' : 'The art of'}
                           </span>
                         </m.span>
                       </span>
@@ -485,7 +492,8 @@ export default function Home() {
                       <span className="block overflow-hidden">
                         <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                           <span className="block translate-y-[-8px]">
-                            Argentine grill
+                            {langContext === 'es' ? 'la parrilla Argentina' : 'Argentine grill'}
+
                           </span>
                         </m.span>
                       </span>
@@ -493,7 +501,8 @@ export default function Home() {
                       <span className="block overflow-hidden">
                         <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                           <span className="block translate-y-[-8px]">
-                            in the heart
+                            {langContext === 'es' ? 'en el corazón' : 'in the heart'}
+
                           </span>
                         </m.span>
                       </span>
@@ -501,7 +510,7 @@ export default function Home() {
                       <span className="block overflow-hidden">
                         <m.span variants={reveal} className="block mb-[-10px]">
                           <span className="block translate-y-[-8px]">
-                            of Málaga.
+                            {langContext === 'es' ? 'de Málaga' : 'of Málaga'}
                           </span>
                         </m.span>
                       </span>
@@ -509,17 +518,17 @@ export default function Home() {
                   </div>
 
                   <div className="2xl:ml-auto flex space-x-4 md:space-x-6">
-                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341?cc=16768-fbd&gad_source=1&gclid=CjwKCAiA29auBhBxEiwAnKcSqjiOXnPSN0N7bU4HpOtGitNOLy3O8EUTIgBcn_7MLL9nIOl2J8f1MxoC5BIQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341?cc=16768-fbd&gad_source=1&gclid=CjwKCAiA29auBhBxEiwAnKcSqjiOXnPSN0N7bU4HpOtGitNOLy3O8EUTIgBcn_7MLL9nIOl2J8f1MxoC5BIQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener noreferrer" className="block uppercase text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                       <m.span variants={reveal} className="block">
-                        Bookings
+                        {langContext === 'es' ? 'Reserva' : 'Bookings'}
 
                         <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                       </m.span>
                     </a>
                     <Link legacyBehavior href="/restaurant">
-                      <a className="block uppercase text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <a className="block uppercase text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                         <m.span variants={reveal} className="block">
-                          Restaurant
+                          {langContext === 'es' ? 'Restaurante' : 'Restaurant'}
 
                           <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                         </m.span>
@@ -527,9 +536,9 @@ export default function Home() {
                     </Link>
 
                     <Link legacyBehavior href="/contact">
-                      <a className="block uppercase  text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <a className="block uppercase  text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                         <m.span variants={reveal} className="block">
-                          Contact
+                          {langContext === 'es' ? 'Contacto' : 'Contact'}
 
                           <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                         </m.span>
@@ -539,14 +548,26 @@ export default function Home() {
 
 
                     <Link legacyBehavior href="/terms">
-                      <a className="block uppercase  text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <a className="block uppercase  text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                         <m.span variants={reveal} className="block">
-                          Terms
+                          {langContext === 'es' ? 'Términos' : 'Terms'}
 
                           <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                         </m.span>
                       </a>
                     </Link>
+
+                    <a className="block uppercase  text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden cursor-pointer"
+                      onClick={() => {
+
+                        handleLangChange()
+                      }}>
+                      <m.span variants={reveal} className="block">
+                        {langContext === 'es' ? 'en' : 'es'}
+
+
+                      </m.span>
+                    </a>
                   </div>
                 </div>
               </article>

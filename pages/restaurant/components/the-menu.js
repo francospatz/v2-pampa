@@ -3,23 +3,16 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import { fade, revealNoDelay } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
-import { ThemeContext } from '@/context/theme'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import { IntroContext } from '@/context/intro'
+import { LangContext } from '@/context/lang'
 import Div100vh from 'react-div-100vh'
 
 
 export default function TheMenu() {
-    const containerRef = useRef(null)
-    /* const [introContext, setIntroContext] = useContext(IntroContext);
 
+    const [langContext, setLangContext] = useContext(LangContext);
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIntroContext(true)
-        }, 500);
-    }, []); */
     return (
         <Layout>
             <NextSeo title={"The Menu"} />
@@ -57,7 +50,9 @@ export default function TheMenu() {
                                         <m.div variants={fade} className="w-10/12 md:w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] md:mx-auto font-serif text-xl xl:text-[22px] leading-tight tracking-tight content md:mt-16 xl:mt-24">
 
 
-                                            <h1 className="title uppercase">The Menu</h1>
+                                            <h1 className="title uppercase">
+                                                {langContext === 'es' ? "El Menú" : "The Menu"}
+                                            </h1>
                                             <p>
                                                 <b>Pan horneado y mantequilla ahumada&nbsp;&nbsp;&nbsp;2.00</b>
                                                 <br />

@@ -24,6 +24,7 @@ import 'swiper/css/mousewheel';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import 'swiper/css/grid';
+import { LangContext } from '@/context/lang'
 
 
 
@@ -51,6 +52,10 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   const [introContext, setIntroContext] = useState(false);
   const [themeContext, setThemeContext] = useState(0);
+  const userLang = navigator.language || navigator.userLanguage;
+
+  const firstLang = userLang === "es-ES" ? 'es' : 'en';
+  const [langContext, setLangContext] = useState(firstLang)
 
   useEffect(() => {
     setThemeContext(0)
@@ -65,196 +70,198 @@ export default function App({ Component, pageProps }) {
 
       <IntroContext.Provider value={[introContext, setIntroContext]}>
         <ThemeContext.Provider value={[themeContext, setThemeContext]}>
-          {/* INTRO START */}
-          <LazyMotion features={domAnimation}>
-            {!introContext && router.asPath == '/' && (
-              <>
-                <m.div
-                  initial="hidden"
-                  animate="visible"
-                  variants={introEnd}
-                  transition={{ delay: 3.05, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
-                  className={`fixed inset-0 z-[1000] h-full flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
-                >
-                </m.div>
-                <m.div
-                  initial="hidden"
-                  animate="visible"
-                  variants={introEnd}
-                  transition={{ delay: 2.6, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
-                  className={`fixed inset-0 z-[1000] flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
-                >
-                  <div
-                    className="relative overflow-hidden w-full max-w-xs md:max-w-md 2xl:max-w-xl"
+          <LangContext.Provider value={[langContext, setLangContext]}>
+            {/* INTRO START */}
+            <LazyMotion features={domAnimation}>
+              {!introContext && router.asPath == '/' && (
+                <>
+                  <m.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={introEnd}
+                    transition={{ delay: 3.05, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
+                    className={`fixed inset-0 z-[1000] h-full flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
                   >
-                    {/* Reveal In */}
-                    <m.div
-                      className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]}`}
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageReveal}
-                      transition={{ delay: 0.25, duration: 1.5, ease: [0.83, 0, 0.17, 1] }}
+                  </m.div>
+                  <m.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={introEnd}
+                    transition={{ delay: 2.6, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
+                    className={`fixed inset-0 z-[1000] flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
+                  >
+                    <div
+                      className="relative overflow-hidden w-full max-w-xs md:max-w-md 2xl:max-w-xl"
                     >
-                    </m.div>
+                      {/* Reveal In */}
+                      <m.div
+                        className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]}`}
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageReveal}
+                        transition={{ delay: 0.25, duration: 1.5, ease: [0.83, 0, 0.17, 1] }}
+                      >
+                      </m.div>
 
-                    {/* Reveal Out */}
-                    <m.div
-                      className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]}`}
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageRevealOut}
-                      transition={{ delay: 1.75, duration: 1.5, ease: [0.83, 0, 0.17, 1] }}
-                    >
-                    </m.div>
+                      {/* Reveal Out */}
+                      <m.div
+                        className={`absolute inset-0 z-[1000] h-full w-full ${colorThemes[themeContext]}`}
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageRevealOut}
+                        transition={{ delay: 1.75, duration: 1.5, ease: [0.83, 0, 0.17, 1] }}
+                      >
+                      </m.div>
 
-                    <div>
-                      <Image
-                        alt="Pampa Grill"
-                        src={image1}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        width={1334}
-                        height={1613}
-                      />
+                      <div>
+                        <Image
+                          alt="Pampa Grill"
+                          src={image1}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          width={1334}
+                          height={1613}
+                        />
+                      </div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 0.5, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image1}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 0.75, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image2}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 1, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image3}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 1.25, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image4}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 1.5, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image5}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 1.75, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image1}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 2, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image2}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
+
+                      <m.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageLoad}
+                        transition={{ delay: 2.25, duration: 0 }}
+                      >
+                        <Image
+                          alt="Pampa Grill"
+                          src={image3}
+                          className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                          priority={true}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </m.div>
                     </div>
+                  </m.div>
+                </>
+              )}
+            </LazyMotion>
+            {/* Intro End */}
 
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 0.5, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image1}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 0.75, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image2}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 1, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image3}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 1.25, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image4}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 1.5, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image5}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 1.75, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image1}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 2, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image2}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-
-                    <m.div
-                      initial="hidden"
-                      animate="visible"
-                      variants={imageLoad}
-                      transition={{ delay: 2.25, duration: 0 }}
-                    >
-                      <Image
-                        alt="Pampa Grill"
-                        src={image3}
-                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
-                        priority={true}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </m.div>
-                  </div>
-                </m.div>
-              </>
-            )}
-          </LazyMotion>
-          {/* Intro End */}
-
-          <AnimatePresence mode='wait'>
-            <Component {...pageProps} key={router.asPath} />
-          </AnimatePresence>
+            <AnimatePresence mode='wait'>
+              <Component {...pageProps} key={router.asPath} />
+            </AnimatePresence>
+          </LangContext.Provider>
         </ThemeContext.Provider>
       </IntroContext.Provider>
     </ReactLenis>

@@ -1,5 +1,5 @@
 'use client'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Layout from '@/components/layout'
 import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
@@ -7,11 +7,13 @@ import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
 import Div100vh from 'react-div-100vh'
+import { LangContext } from '@/context/lang'
 
 
 export default function Contact() {
-  const containerRef = useRef(null)
-  const [formType, setFormType] = useState('client');
+
+  const [langContext, setLangContext] = useContext(LangContext);
+
   const [introContext, setIntroContext] = useContext(IntroContext);
 
   const reveal = {
@@ -57,7 +59,9 @@ export default function Contact() {
                     <div className="flex flex-wrap-reverse">
                       <div className="w-full md:w-1/2  md:pr-12 xl:pr-24">
                         <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-5 relative ">
-                          <m.span variants={reveal} className="block">All enquiries</m.span>
+                          <m.span variants={reveal} className="block">
+                            {langContext === 'es' ? 'Todas las consultas' : 'All Enquiries'}
+                          </m.span>
                         </span>
 
                         <a href="mailto:info@pampagrillmalaga.com" className="inline-block group font-serif text-light-brown relative text-lg lg:text-2xl font-normal leading-[1.15] md:leading-[1.2] mr-8  transition-colors ease-in-out duration-500  group">
@@ -78,7 +82,9 @@ export default function Contact() {
                         <hr className="border-b border-t-0 border-current my-6 md:my-8 xl:my-12 opacity-50" />
 
                         <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-5 relative ">
-                          <m.span variants={reveal} className="block">Location</m.span>
+                          <m.span variants={reveal} className="block">
+                            {langContext === 'es' ? 'Ubicación' : 'Location'}
+                          </m.span>
                         </span>
 
                         <div><a href="https://maps.app.goo.gl/dMJyDeobhFWNYkE7A" target="_blank" rel="noopener noreferrer" className="group inline-block font-serif mb-3 text-light-brown relative text-lg lg:text-2xl font-normal leading-[1.15] md:leading-[1.2] tr  transition-colors ease-in-out duration-500 ">
@@ -123,7 +129,7 @@ export default function Contact() {
 
                         <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target="_blank" className="inline-block group font-serif text-light-brown relative text-3xl font-normal leading-[1.15] md:leading-[1.2] md:pt-0 pb-16  transition-colors ease-in-out duration-500  group">
                           <m.span variants={reveal} className="block">
-                            Book a table
+                            {langContext === 'es' ? 'Reserva una mesa' : 'Book a table'}
 
                             <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                           </m.span>
@@ -140,7 +146,9 @@ export default function Contact() {
                   <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-0">© Pampa Grill 2024</span>
 
                   <span className="block w-1/2  text-right  ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
-                    <Link legacyBehavior href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                    <Link legacyBehavior href="/"><a className="group relative">
+                      {langContext === 'es' ? 'Volver' : 'Back to home'}
+                      <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
                   </span>
                 </div>
               </m.footer>

@@ -14,7 +14,7 @@ export const fadeLate = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
-    transition: { delay: 4.6, duration: 0.9, ease: [0.83, 0, 0.17, 1] }
+    transition: { delay: 1, duration: 0.9, ease: [0.83, 0, 0.17, 1] }
   },
   exit: {
     opacity: 0,

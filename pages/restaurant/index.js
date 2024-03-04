@@ -3,7 +3,7 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import { fade, revealNoDelay } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
-import { ThemeContext } from '@/context/theme'
+import { LangContext } from '@/context/lang'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
@@ -12,8 +12,7 @@ import Div100vh from 'react-div-100vh'
 
 export default function Restaurant(initialData) {
 
-  const containerRef = useRef(null)
-  const [themeContext, setThemeContext] = useContext(ThemeContext);
+  const [langContext, setLangContext] = useContext(LangContext);
   const [introContext, setIntroContext] = useContext(IntroContext);
 
   const revealImage = {
@@ -37,17 +36,14 @@ export default function Restaurant(initialData) {
   const restaurant = [
     {
       slug: "the-menu",
-      title: "The Menu",
+      title: langContext === 'es' ? "El Menú" : "The Menu",
     },
     {
       slug: "gallery",
-      title: "Gallery",
+      title: langContext === 'es' ? "Galería" : "Gallery",
     },
 
-    {
-      slug: "gift-card",
-      title: "Gift Card",
-    },
+
   ];
 
   return (
@@ -111,13 +107,17 @@ export default function Restaurant(initialData) {
 
 
                     <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
-                      <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target='_blank' className="group relative">Bookings <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a>
+                      <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target='_blank' className="group relative">
+                        {langContext === 'es' ? 'Reserva' : 'Bookings'}
+                        <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a>
                     </span>
                     <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
-                      <Link legacyBehavior href="/contact"><a className="group relative">Contact  <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                      <Link legacyBehavior href="/contact"><a className="group relative">{langContext === 'es' ? 'Contacto' : 'Contact'}  <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
                     </span>
-                    <span className="block w-auto font-sans uppercase text-sm ml-auto  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
-                      <Link legacyBehavior href="/"><a className="group relative">Home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                    <span className="block w-1/2  text-right  ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
+                      <Link legacyBehavior href="/"><a className="group relative">
+                        {langContext === 'es' ? 'Volver' : 'Back to home'}
+                        <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
                     </span>
 
 

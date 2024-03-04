@@ -1,10 +1,11 @@
 'use client'
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { fadeLate } from '@/helpers/transitions';
 
 
 const images = [
@@ -41,7 +42,7 @@ export default function ImageGallery() {
 
     return (
         <>
-            {images && <div className="h-full w-full md:w-4/5">
+            {images && <m.div variants={fadeLate} className="h-full w-full md:w-4/5">
                 <Swiper
                     modules={[Navigation]}
                     loop={true}
@@ -52,7 +53,7 @@ export default function ImageGallery() {
                     grabCursor={true}
                     navigation={true}
 
-                    className="thumbShow h-[74%] mb-2 mt-0 sm:mt-6"
+                    className="thumbShow h-[60vh] mb-2 mt-0 sm:mt-6"
                     ref={swiperRef}
                 >
                     {images.map((item, index) => {
@@ -94,7 +95,7 @@ export default function ImageGallery() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </div>}
+            </m.div>}
         </>
     );
 }
