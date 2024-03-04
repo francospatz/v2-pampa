@@ -88,7 +88,7 @@ export default function Gallery() {
 
                                             <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
                                                 <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target='_blank' className="group relative">
-                                                    {langContext === 'es' ? 'Reserva' : 'Bookings'}
+                                                    {langContext === 'es' ? 'Reservas' : 'Bookings'}
                                                     <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a>
                                             </span>
                                             <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
