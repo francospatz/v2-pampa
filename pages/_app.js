@@ -52,12 +52,10 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   const [introContext, setIntroContext] = useState(false);
   const [themeContext, setThemeContext] = useState(0);
-  const userLang = navigator.language || navigator.userLanguage;
-
-  const firstLang = userLang === "es-ES" ? 'es' : 'en';
-  const [langContext, setLangContext] = useState(firstLang)
+  const [langContext, setLangContext] = useState('es')
 
   useEffect(() => {
+    setLangContext(navigator.language || navigator.userLanguage === "es-ES" ? 'es' : 'en')
     setThemeContext(0)
   }, []);
 
