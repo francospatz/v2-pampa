@@ -143,6 +143,15 @@
         @apply opacity-100;
       }
     }
+    @media (pointer: coarse) {
+      a {
+        @apply opacity-100;
+
+        &:hover {
+          @apply opacity-100;
+        }
+      }
+    }
   }
 }
 
