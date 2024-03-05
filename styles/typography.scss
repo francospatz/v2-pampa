@@ -375,6 +375,13 @@
 
   object-position: center;
 }
+
+.thumbShow .swiper-button-prev {
+  --swiper-navigation-color: transparent;
+}
+.thumbShow .swiper-button-next {
+  --swiper-navigation-color: transparent;
+}
 /*
 .thumbShow .swipper-wrapper img {
   object-position: center;

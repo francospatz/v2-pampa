@@ -50,7 +50,7 @@ export default function TheMenu() {
                                         <m.div variants={fade} className="w-10/12 md:w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] md:mx-auto font-serif text-xl xl:text-[22px] leading-tight tracking-tight content md:mt-16 xl:mt-24">
 
 
-                                            <h1 className="title uppercase">
+                                            <h1 className="title uppercase font-bold">
                                                 {langContext === 'es' ? "El Menú" : "The Menu"}
                                             </h1>
                                             <p>
