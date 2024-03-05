@@ -55,7 +55,7 @@ export default function Gallery() {
                                 <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[90%] flex  flex-col items-start justify-around" >
                                     <div className="w-full relative z-10  flex justify-center items-start mt-[-10px]">
 
-                                        <p className="w-full md:w-11/12 font-serif text-[3rem] text-center font-bold" >
+                                        <p className="w-full md:w-11/12 font-serif text-[3rem] md:text-[4rem] text-center font-bold" >
                                             {langContext === 'es' ? 'GALERÍA' : 'GALLERY'}
                                         </p>
 
