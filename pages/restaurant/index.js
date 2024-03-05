@@ -61,9 +61,9 @@ export default function Restaurant(initialData) {
               <m.main variants={fade} className="p-4 md:p-6 relative w-full relative flex bg-off-white" >
 
                 <article className="flex flex-wrap w-full ">
-                  <div className="w-full relative z-10  flex justify-center items-start mt-[-10px]">
+                  <div className="w-full relative z-10  flex justify-center items-center mt-[-10px]">
 
-                    <p className="w-full md:w-11/12 font-serif font-bold text-[3rem] text-center" >
+                    <p className="w-full md:w-11/12 font-serif font-bold text-[3rem] lg:text-[5rem] text-center" >
                       {langContext === 'es' ? 'RESTAURANTE' : 'RESTAURANT'}
                     </p>
 

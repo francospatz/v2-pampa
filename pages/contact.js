@@ -51,9 +51,9 @@ export default function Contact() {
 
                 <article className="flex flex-wrap w-full">
 
-                  <div className="w-full relative z-10  flex justify-center items-start mt-[-10px]">
+                  <div className="w-full relative z-10  flex justify-center items-center mt-[-10px]">
 
-                    <p className="w-full md:w-11/12 font-serif font-bold text-[3rem] text-center" >
+                    <p className="w-full md:w-11/12 font-serif font-bold text-[3rem] lg:text-[5rem] text-center" >
                       {langContext === 'es' ? 'CONTACTO' : 'CONTACT'}
                     </p>
 
@@ -129,9 +129,9 @@ export default function Contact() {
 
 
                       </div>
-                      <div className="w-full md:w-1/2  md:pr-12 xl:pr-24 flex justify-center items-center ">
+                      <div className="w-full md:w-1/2  flex justify-center items-center ">
 
-                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target="_blank" className="inline-block group font-serif text-light-brown relative text-3xl font-normal leading-[1.15] md:leading-[1.2] md:pt-0 pb-16  transition-colors ease-in-out duration-500  group">
+                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target="_blank" className="inline-block group font-serif text-light-brown relative text-3xl font-normal leading-[1.15] md:leading-[1.2] md:pt-0 pb-16 md:pb-0  transition-colors ease-in-out duration-500  group">
                           <m.span variants={reveal} className="block">
                             {langContext === 'es' ? 'Reserva una mesa' : 'Book a table'}
 
