@@ -517,8 +517,8 @@ export default function Home() {
                     </h1>
                   </div>
 
-                  <div className="2xl:ml-auto flex space-x-4 md:space-x-6 mix-blend-display justify-between">
-                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341?cc=16768-fbd&gad_source=1&gclid=CjwKCAiA29auBhBxEiwAnKcSqjiOXnPSN0N7bU4HpOtGitNOLy3O8EUTIgBcn_7MLL9nIOl2J8f1MxoC5BIQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener noreferrer" className="block uppercase text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                  <div className="2xl:ml-auto flex space-x-4 md:space-x-6 mix-blend-display ">
+                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341?cc=16768-fbd&gad_source=1&gclid=CjwKCAiA29auBhBxEiwAnKcSqjiOXnPSN0N7bU4HpOtGitNOLy3O8EUTIgBcn_7MLL9nIOl2J8f1MxoC5BIQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener noreferrer" className="block uppercase text-[13px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                       <m.span variants={reveal} className="block">
                         {langContext === 'es' ? 'Reservas' : 'Bookings'}
 
@@ -526,7 +526,7 @@ export default function Home() {
                       </m.span>
                     </a>
                     <Link legacyBehavior href="/restaurant">
-                      <a className="block uppercase text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <a className="block uppercase text-[13px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                         <m.span variants={reveal} className="block">
                           {langContext === 'es' ? 'Restaurante' : 'Restaurant'}
 
@@ -536,7 +536,7 @@ export default function Home() {
                     </Link>
 
                     <Link legacyBehavior href="/contact">
-                      <a className="block uppercase  text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                      <a className="block uppercase  text-[13px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                         <m.span variants={reveal} className="block">
                           {langContext === 'es' ? 'Contacto' : 'Contact'}
 
@@ -545,19 +545,7 @@ export default function Home() {
                       </a>
                     </Link>
 
-
-
-                    <Link legacyBehavior href="/terms">
-                      <a className="block uppercase  text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
-                        <m.span variants={reveal} className="block">
-                          {langContext === 'es' ? 'Términos' : 'Terms'}
-
-                          <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
-                        </m.span>
-                      </a>
-                    </Link>
-
-                    <a className="block uppercase  text-[11px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden cursor-pointer"
+                    <a className="block uppercase  text-[13px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden cursor-pointer"
                       onClick={() => {
 
                         handleLangChange()

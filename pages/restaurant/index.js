@@ -42,6 +42,10 @@ export default function Restaurant(initialData) {
       slug: "gallery",
       title: langContext === 'es' ? "Galería" : "Gallery",
     },
+    {
+      slug: "terms",
+      title: langContext === 'es' ? "Términos" : "Terms",
+    },
 
 
   ];
