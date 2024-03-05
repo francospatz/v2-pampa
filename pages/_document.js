@@ -16,8 +16,8 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#FCF9F0" />
         </Head>
 
-        <body>
-          <Main />
+        <body className='bg-off-white'>
+          <Main className='bg-off-white' />
           <NextScript />
         </body>
 
