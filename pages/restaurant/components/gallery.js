@@ -33,7 +33,7 @@ export default function Gallery() {
                 >
                     <Div100vh className='w-full bg-off-white'>
                         <m.div variants={fade} className="h-full bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown">
-                            <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[85%] md:h-[91%] flex  flex-col items-start justify-start" >
+                            <main className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[85%] md:h-[91%] flex  flex-col items-start justify-start" >
                                 <div className="w-full h-[8%] relative z-10  flex justify-center items-center">
 
                                     <p className="w-full md:w-11/12 font-serif text-[3rem] md:text-[4rem] text-center font-bold" >
@@ -42,14 +42,14 @@ export default function Gallery() {
 
                                 </div>
                                 <article className="flex w-full justify-center items-start h-[92%]">
-                                    <m.div variants={fade} className="w-full font-serif text-xl xl:text-[22px] leading-tight tracking-tight content flex flex-col justify-center items-center h-full">
+                                    <div className="w-full font-serif text-xl xl:text-[22px] leading-tight tracking-tight content flex flex-col justify-center items-center h-full">
                                         <div className='font-serif leading-none tracking-tight h-full w-full flex justify-around items-center'>
                                             <LazyHavyImageCarousel ></LazyHavyImageCarousel>
                                         </div>
-                                    </m.div>
+                                    </div>
                                 </article>
-                            </m.main>
-                            <m.footer variants={fade} className="pt-0 h-[15%] md:h-[9%] p-4 md:p-6 bg-off-white 
+                            </main>
+                            <m.footer className="pt-0 h-[15%] md:h-[9%] p-4 md:p-6 bg-off-white 
                                  w-full flex items-end">
                                 <div className="flex flex-col md:flex-row w-full">
 
