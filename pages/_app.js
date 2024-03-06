@@ -117,8 +117,8 @@ export default function App({ Component, pageProps }) {
                           src={image1}
                           className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
                           priority={true}
-                          width={4}
-                          height={6}
+                          width={1334}
+                          height={1613}
                         />
                       </div>
 
