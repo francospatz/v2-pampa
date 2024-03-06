@@ -5,7 +5,7 @@ import { m } from 'framer-motion';
 
 import { FreeMode, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { fadeLate } from '@/helpers/transitions';
+import { fade } from '@/helpers/transitions';
 
 import image1 from '../../../public/images/gallery/food/1.webp'
 import image2 from '../../../public/images/gallery/food/2.webp'
@@ -93,7 +93,7 @@ export default function ImageGallery() {
     };
 
     return (
-        <m.div variants={fadeLate} className="h-full w-full md:w-4/5 flex flex-col justify-center">
+        <m.div variants={fade} className="h-full w-full md:w-4/5 flex flex-col justify-center">
             <Swiper
                 modules={[Navigation]}
                 loop={true}
