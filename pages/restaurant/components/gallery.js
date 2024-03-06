@@ -1,45 +1,29 @@
 'use client'
-import { useRef, useContext } from 'react';
-import Image from 'next/image';
+import { useContext } from 'react';
 import Layout from '@/components/layout'
-import { fade, fadeLate } from '@/helpers/transitions'
-import { LazyMotion, domAnimation, m, motion } from 'framer-motion'
+import { fade } from '@/helpers/transitions'
+import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Div100vh from 'react-div-100vh'
-import { ReactLenis } from '@studio-freight/react-lenis';
 import ImageCarousel from './imageCarousel'
 import Link from 'next/link';
 import { LangContext } from '@/context/lang'
 
-const images = [
-    '/images/gallery/food/1.webp',
-    '/images/gallery/food/2.webp',
-    '/images/gallery/food/3.webp',
-    '/images/gallery/food/4.webp',
-    '/images/gallery/food/5.webp',
-    '/images/gallery/food/6.webp',
-    '/images/gallery/food/7.webp',
-    '/images/gallery/food/8.webp',
-    '/images/gallery/restaurant/1.webp',
-    '/images/gallery/restaurant/2.webp',
-    '/images/gallery/restaurant/3.webp',
-    '/images/gallery/restaurant/4.webp',
-    '/images/gallery/restaurant/5.webp',
-    '/images/gallery/restaurant/6.webp',
-    '/images/gallery/restaurant/7.webp',
-    '/images/gallery/restaurant/8.webp',
-];
+import dynamic from 'next/dynamic';
+
+const LazyHavyImageCarousel = dynamic(() => import('./imageCarousel'), {
+    ssr: false,
+    loading: () => <div>Loading...</div>,
+})
+
+
 
 
 export default function Gallery() {
     const [langContext, setLangContext] = useContext(LangContext);
 
-    const lenisRef = useRef();
-
-
     return (
         <Layout >
-            {/* <ReactLenis ref={lenisRef}> */}
             <NextSeo title="Gallery" />
             <LazyMotion features={domAnimation}>
                 <m.div
@@ -49,7 +33,6 @@ export default function Gallery() {
                 >
                     <Div100vh className='w-full bg-off-white'>
                         <m.div variants={fade} className="h-full bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown">
-
                             <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[85%] md:h-[91%] flex  flex-col items-start justify-start" >
                                 <div className="w-full h-[8%] relative z-10  flex justify-center items-center">
 
@@ -58,23 +41,13 @@ export default function Gallery() {
                                     </p>
 
                                 </div>
-
                                 <article className="flex w-full justify-center items-start h-[92%]">
-
                                     <m.div variants={fade} className="w-full font-serif text-xl xl:text-[22px] leading-tight tracking-tight content flex flex-col justify-center items-center h-full">
-
-                                        {/* <div className='w-full h-full flex flex-col items-center justify-center'> */}
                                         <div className='font-serif leading-none tracking-tight h-full w-full flex justify-around items-center'>
-                                            <ImageCarousel images={images}></ImageCarousel>
+                                            <LazyHavyImageCarousel ></LazyHavyImageCarousel>
                                         </div>
-                                        {/* </div> */}
-
-
-
                                     </m.div>
-
                                 </article>
-
                             </m.main>
                             <m.footer variants={fade} className="pt-0 h-[15%] md:h-[9%] p-4 md:p-6 bg-off-white 
                                  w-full flex items-end">
@@ -105,15 +78,10 @@ export default function Gallery() {
                                     </div>
                                 </div>
                             </m.footer>
-
-
                         </m.div>
-
                     </Div100vh>
-
                 </m.div>
             </LazyMotion>
-            {/* </ReactLenis> */}
         </Layout>
     )
 }
