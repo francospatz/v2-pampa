@@ -113,10 +113,12 @@ export default function ImageGallery() {
                                     src={item}
                                     priority={index === 0 ? true : false}
                                     alt="images"
+                                    /* width={10}
+                                    height={15} */
                                     /* placeholder='blur' */
                                     style={{ objectFit: 'contain' }}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className='block h-full object-contain' />
+                                    sizes="50vw"
+                                    className='h-full object-contain' />
                             </div>
                         </SwiperSlide>
                     );
