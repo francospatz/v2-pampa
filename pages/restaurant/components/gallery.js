@@ -12,7 +12,7 @@ import { LangContext } from '@/context/lang'
 import dynamic from 'next/dynamic';
 
 const LazyHavyImageCarousel = dynamic(() => import('./imageCarousel'), {
-    ssr: true,
+    ssr: false,
     loading: () => <div className='h-full w-full md:w-4/5'></div>,
 })
 
