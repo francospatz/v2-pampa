@@ -98,9 +98,7 @@ export default function ImageGallery() {
                 modules={[Navigation]}
                 loop={true}
                 slidesPerView={1}
-                pagination={{
-                    clickable: true,
-                }}
+
                 grabCursor={true}
                 navigation={true}
 
@@ -117,7 +115,7 @@ export default function ImageGallery() {
                                     alt="images"
                                     placeholder='blur'
                                     style={{ objectFit: 'contain' }}
-
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className='block h-full w-auto object-contain' />
                             </div>
                         </SwiperSlide>
