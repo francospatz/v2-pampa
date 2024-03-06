@@ -130,19 +130,21 @@ export default function ImageGallery() {
                 slidesPerView={'auto'}
                 freeMode={{ enabled: true, momentum: true, momentumRatio: 1.5, sticky: true }}
                 modules={[Navigation, FreeMode]}
-                className="thumbBtn h-[20%] w-full"
+                className="thumbBtn min-h-[3em] w-full"
             >
                 {images.map((item, index) => (
-                    <SwiperSlide key={index}
-                        onClick={() => handleChange(index)}>
-                        <div className="thumbContainer"
-                        >
-                            <Image src={item} alt="images"
-                                fill
-                                style={{ objectFit: 'cover' }}
-                                placeholder='blur'
-                                sizes='70px' />
-                        </div>
+                    <SwiperSlide
+                        key={index}
+                        onClick={() => handleChange(index)}
+                        className='h-full'>
+
+                        <Image src={item} alt="images"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            placeholder='blur'
+                            sizes='3em'
+                            className='object-cover' />
+
                     </SwiperSlide>
                 ))}
             </Swiper>

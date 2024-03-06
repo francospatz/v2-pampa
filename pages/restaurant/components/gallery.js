@@ -46,8 +46,6 @@ export default function Gallery() {
                         initial="initial"
                         animate="enter"
                         exit="exit"
-
-
                     >
                         <Div100vh className='w-full bg-off-white'>
                             <m.div variants={fade} className="h-full bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown">
