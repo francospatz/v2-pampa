@@ -96,7 +96,7 @@ export default function ImageGallery() {
         <m.div variants={fadeLate} className="h-full w-full md:w-4/5 flex flex-col justify-center">
             <Swiper
                 modules={[Navigation]}
-                loop={true}
+                loop={false}
                 slidesPerView={1}
 
                 grabCursor={true}

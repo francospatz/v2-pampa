@@ -9,8 +9,8 @@ export default {
     site_name: 'Pampa Grill',
     images: [
       {
-        url: '/images/social.webp',
-        width: 1200,
+        url: '/images/social.png',
+        width: 630,
         height: 630,
         alt: `Pampa Grill`,
       },
