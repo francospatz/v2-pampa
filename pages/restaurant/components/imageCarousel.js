@@ -130,7 +130,7 @@ export default function ImageGallery() {
                 slidesPerView={'auto'}
                 freeMode={{ enabled: true, momentum: true, momentumRatio: 1.5, sticky: true }}
                 modules={[Navigation, FreeMode]}
-                className="thumbBtn min-h-[3em] w-full"
+                className="thumbBtn min-h-[3em] h-[3em] w-full"
             >
                 {images.map((item, index) => (
                     <SwiperSlide

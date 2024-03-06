@@ -4,7 +4,7 @@ export default {
   titleTemplate: '%s | Pampa Grill',
   openGraph: {
     type: 'website',
-    locale: 'en_GB',
+    locale: 'es_ES',
     url: 'https://pampagrillmalaga.com',
     site_name: 'Pampa Grill',
     images: [
