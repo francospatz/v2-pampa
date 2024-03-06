@@ -102,7 +102,7 @@ export default function ImageGallery() {
                 grabCursor={true}
                 navigation={true}
 
-                className="thumbShow fade h-[60vh] mb-2 mt-[-10px]"
+                className="thumbShow fade h-[60vh] mb-2 "
                 ref={swiperRef}
             >
                 {images.map((item, index) => {

@@ -50,10 +50,10 @@ export default function Gallery() {
 
                     >
                         <Div100vh className='w-full bg-off-white'>
-                            <m.div variants={fade} className="h-full bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown flex flex-wrap ">
+                            <m.div variants={fade} className="h-full bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown">
 
-                                <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[90%] flex  flex-col items-start justify-around" >
-                                    <div className="w-full relative z-10  flex justify-center items-start mt-[-10px]">
+                                <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[90%] flex  flex-col items-start justify-start" >
+                                    <div className="w-full h-[8%] relative z-10  flex justify-center items-center">
 
                                         <p className="w-full md:w-11/12 font-serif text-[3rem] md:text-[4rem] text-center font-bold" >
                                             {langContext === 'es' ? 'GALERÍA' : 'GALLERY'}
@@ -78,7 +78,8 @@ export default function Gallery() {
                                     </article>
 
                                 </m.main>
-                                <m.footer variants={fade} className="p-4 md:p-6 bg-off-white relative w-full flex items-end">
+                                <m.footer variants={fade} className="pt-0 h-[10%] p-4 md:p-6 bg-off-white 
+                                 w-full flex items-end">
                                     <div className="flex flex-col md:flex-row w-full">
 
                                         <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
@@ -97,7 +98,7 @@ export default function Gallery() {
                                                 <Link legacyBehavior href="/contact"><a className="group relative">{langContext === 'es' ? 'Contacto' : 'Contact'}  <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
                                             </span>
                                             <span className="block w-1/2  text-right  ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
-                                                <Link legacyBehavior href="/"><a className="group relative">
+                                                <Link legacyBehavior href="/restaurant"><a className="group relative">
                                                     {langContext === 'es' ? 'Volver' : 'Back to home'}
                                                     <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
                                             </span>
