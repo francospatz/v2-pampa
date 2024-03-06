@@ -5,7 +5,7 @@ import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Div100vh from 'react-div-100vh'
-import ImageCarousel from './imageCarousel'
+//import ImageCarousel from './imageCarousel'
 import Link from 'next/link';
 import { LangContext } from '@/context/lang'
 
@@ -13,7 +13,7 @@ import dynamic from 'next/dynamic';
 
 const LazyHavyImageCarousel = dynamic(() => import('./imageCarousel'), {
     ssr: false,
-    loading: () => <div>Loading...</div>,
+    loading: () => <div className='h-full w-full md:w-4/5'></div>,
 })
 
 
