@@ -123,7 +123,7 @@ export default function ImageGallery() {
                                     src={item.src}
                                     fill
                                     alt="images"
-
+                                    placeholder='empty'
 
 
                                     className='z-[10001] object-center big-image object-contain' />
@@ -149,7 +149,7 @@ export default function ImageGallery() {
                                 <Image src={item.src} alt="images"
                                     fill
                                     style={{ objectFit: 'cover' }}
-
+                                    placeholder='empty'
                                     sizes='60px' />
                             </div>
                         </SwiperSlide>
