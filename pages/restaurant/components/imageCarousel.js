@@ -108,16 +108,16 @@ export default function ImageGallery() {
                 {images.map((item, index) => {
                     return (
                         <SwiperSlide key={index} className='object-center'>
-                            <div className='flex h-full w-full items-center justify-center'>
+                            <div className='flex h-full items-center justify-center'>
                                 <Image
                                     src={item}
                                     priority={index === 0 ? true : false}
                                     alt="images"
-                                    /* width={10}
-                                    height={15} */
+
+                                    /* width={'100%'} */
                                     /* placeholder='blur' */
                                     style={{ objectFit: 'contain' }}
-                                    sizes="50vw"
+                                    sizes="(max-width: 720px) 30vw, 50vw"
                                     className='h-full object-contain' />
                             </div>
                         </SwiperSlide>
