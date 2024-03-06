@@ -110,7 +110,7 @@ export default function ImageGallery() {
                                     alt="images"
 
                                     /* width={'100%'} */
-                                    /* placeholder='blur' */
+                                    placeholder='blur'
                                     style={{ objectFit: 'contain' }}
                                     sizes="50vw"
                                     className='h-full object-contain' />
@@ -141,7 +141,9 @@ export default function ImageGallery() {
                             style={{ objectFit: 'cover' }}
                             placeholder='blur'
                             sizes='(min-width: 1200px) 5em, 3em'
-                            className='object-cover' />
+                            className='object-cover'
+                            quality={20}
+                        />
 
                     </SwiperSlide>
                 ))}
