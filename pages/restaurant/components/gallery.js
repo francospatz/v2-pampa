@@ -1,7 +1,7 @@
 'use client'
 import { useContext } from 'react';
 import Layout from '@/components/layout'
-import { fade } from '@/helpers/transitions'
+import { fade, revealNoDelay } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Div100vh from 'react-div-100vh'
@@ -31,9 +31,9 @@ export default function Gallery() {
                     animate="enter"
                     exit="exit"
                 >
-                    <Div100vh className='w-full bg-off-white'>
+                    <Div100vh>
                         <m.div variants={fade} className="h-full bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown">
-                            <main className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[85%] md:h-[91%] flex  flex-col items-start justify-start" >
+                            <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[85%] md:h-[91%] flex  flex-col items-start justify-start" >
                                 <div className="w-full h-[8%] relative z-10  flex justify-center items-center">
 
                                     <p className="w-full md:w-11/12 font-serif text-[3rem] md:text-[4rem] text-center font-bold" >
@@ -48,10 +48,10 @@ export default function Gallery() {
                                         </div>
                                     </div>
                                 </article>
-                            </main>
-                            <m.footer className="pt-0 h-[15%] md:h-[9%] p-4 md:p-6 bg-off-white 
+                            </m.main>
+                            <m.footer variants={fade} className="pt-0 h-[15%] md:h-[9%] p-4 md:p-6 bg-off-white 
                                  w-full flex items-end">
-                                <div className="flex flex-col md:flex-row w-full">
+                                <m.div variants={revealNoDelay} className="flex flex-col md:flex-row w-full">
 
                                     <span className="block w-auto font-sans uppercase text-sm  xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Pampa Grill 2024</span>
 
@@ -76,7 +76,7 @@ export default function Gallery() {
 
 
                                     </div>
-                                </div>
+                                </m.div>
                             </m.footer>
                         </m.div>
                     </Div100vh>
