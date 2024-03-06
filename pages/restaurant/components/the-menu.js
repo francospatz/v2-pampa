@@ -380,11 +380,7 @@ export default function TheMenu() {
                                                 <br />
                                             </p>
 
-                                            {/* <div className="max-w-[320px] bg-blend-color-burn bg-off-white mt-8 md:mt-16 mb-4">
-                          <img src="/images/signature.png" alt="Vanessa Signature" className="w-full mix-blend-darken" />
-                        </div>
 
-                        <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] tracking-tight md:leading-[1.15] xl:leading-[1.15]">Vanessa Boamah<br />Founder</span> */}
                                         </m.div>
                                     </LazyMotion>
                                 </div>
