@@ -251,7 +251,7 @@ export default function Home() {
                 </div>
               </div>
 
-
+              {/* Desktop */}
 
               <div className="hidden md:block absolute z-100 top-0 right-0 md:bottom-0 w-[100vw] md:w-[38%] xl:w-[40%] 3xl:w-[42%] h-[100vh] overflow-hidden mr-[60px]">
                 <div className="relative flex flex-col space-y-[20px] md:space-y-[50px] overflow-y-hidden">
@@ -545,7 +545,7 @@ export default function Home() {
                       </a>
                     </Link>
 
-                    <span className="block uppercase  text-[13.5px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden cursor-pointer"
+                    <a className="block uppercase  text-[13.5px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden cursor-pointer"
                       onClick={() => {
 
                         handleLangChange()
@@ -555,7 +555,7 @@ export default function Home() {
 
 
                       </m.span>
-                    </span>
+                    </a>
                   </div>
                 </div>
               </article>
