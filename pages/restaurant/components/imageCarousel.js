@@ -98,7 +98,7 @@ export default function ImageGallery() {
                 modules={[Navigation]}
                 loop={true}
                 slidesPerView={1}
-
+                lazy={true}
                 grabCursor={true}
                 navigation={true}
 
@@ -111,14 +111,15 @@ export default function ImageGallery() {
                             <div className='flex h-full items-center justify-center'>
                                 <Image
                                     src={item}
-                                    priority={index === 0 ? true : false}
+                                    priority={false}
                                     alt="images"
 
                                     /* width={'100%'} */
                                     /* placeholder='blur' */
                                     style={{ objectFit: 'contain' }}
-                                    sizes="(max-width: 720px) 30vw, 50vw"
+                                    sizes="50vw"
                                     className='h-full object-contain' />
+                                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
                         </SwiperSlide>
                     );
@@ -144,7 +145,7 @@ export default function ImageGallery() {
                             fill
                             style={{ objectFit: 'cover' }}
                             placeholder='blur'
-                            sizes='3em'
+                            sizes='(min-width: 1200px) 5em, 3em'
                             className='object-cover' />
 
                     </SwiperSlide>
