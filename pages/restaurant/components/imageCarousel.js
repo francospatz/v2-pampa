@@ -93,7 +93,7 @@ export default function ImageGallery() {
     };
 
     return (
-        <m.div variants={fadeLate} className="h-full w-full md:w-4/5">
+        <m.div variants={fadeLate} className="h-full w-full md:w-4/5 flex flex-col justify-center">
             <Swiper
                 modules={[Navigation]}
                 loop={true}
@@ -102,7 +102,7 @@ export default function ImageGallery() {
                 grabCursor={true}
                 navigation={true}
 
-                className="thumbShow fade h-[60vh] mb-2 "
+                className="thumbShow fade"
                 ref={swiperRef}
             >
                 {images.map((item, index) => {
@@ -130,7 +130,7 @@ export default function ImageGallery() {
                 slidesPerView={'auto'}
                 freeMode={{ enabled: true, momentum: true, momentumRatio: 1.5, sticky: true }}
                 modules={[Navigation, FreeMode]}
-                className="thumbBtn h-[20%]"
+                className="thumbBtn h-[20%] w-full"
             >
                 {images.map((item, index) => (
                     <SwiperSlide key={index}

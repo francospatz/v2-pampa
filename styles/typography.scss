@@ -176,6 +176,7 @@
 .rewind {
   margin-left: initial !important;
   margin-right: initial !important;
+  padding: 1rem;
 }
 
 .fade .swiper-button-next::after,
@@ -217,19 +218,24 @@
   animation: zoomOut 0.4s backwards;
 }
 
-.thumbShow .swipper-wrapper {
+/* .thumbShow .swipper-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 
   object-position: center;
-}
+} */
 
 .thumbShow .swiper-button-prev {
   --swiper-navigation-color: transparent;
 }
 .thumbShow .swiper-button-next {
   --swiper-navigation-color: transparent;
+}
+
+.thumbShow {
+  padding-bottom: 1rem !important;
+  padding-top: 1rem !important;
 }
 
 .thumbBtn .swiper-slide {

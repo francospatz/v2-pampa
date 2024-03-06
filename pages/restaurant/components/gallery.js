@@ -61,15 +61,15 @@ export default function Gallery() {
 
                                     </div>
 
-                                    <article className="flex w-full justify-center items-start">
+                                    <article className="flex w-full justify-center items-start h-[92%]">
 
-                                        <m.div variants={fade} className="w-full font-serif text-xl xl:text-[22px] leading-tight tracking-tight content flex flex-col justify-center h-full">
+                                        <m.div variants={fade} className="w-full font-serif text-xl xl:text-[22px] leading-tight tracking-tight content flex flex-col justify-center items-center h-full">
 
-                                            <div className='w-full'>
-                                                <div className='font-serif leading-none tracking-tight h-full w-full flex justify-center'>
-                                                    <ImageCarousel images={images}></ImageCarousel>
-                                                </div>
+                                            {/* <div className='w-full h-full flex flex-col items-center justify-center'> */}
+                                            <div className='font-serif leading-none tracking-tight h-full w-full flex justify-around items-center'>
+                                                <ImageCarousel images={images}></ImageCarousel>
                                             </div>
+                                            {/* </div> */}
 
 
 
