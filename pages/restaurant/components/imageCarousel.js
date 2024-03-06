@@ -111,7 +111,7 @@ export default function ImageGallery() {
                             <div className='flex h-full w-full items-center justify-center'>
                                 <Image
                                     src={item}
-
+                                    priority={index === 0 ? true : false}
                                     alt="images"
                                     /* placeholder='blur' */
                                     style={{ objectFit: 'contain' }}
