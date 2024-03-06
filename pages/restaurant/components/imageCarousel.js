@@ -113,7 +113,7 @@ export default function ImageGallery() {
                     grabCursor={true}
                     navigation={true}
 
-                    className="thumbShow h-[60vh] mb-2 mt-0"
+                    className="thumbShow h-[60vh] mb-2 mt-[-10px]"
                     ref={swiperRef}
                 >
                     {images.map((item, index) => {
@@ -125,7 +125,7 @@ export default function ImageGallery() {
                                     alt="images"
 
 
-                                    priority={true}
+
                                     className='z-[10001] object-center big-image object-contain' />
                             </SwiperSlide>
                         );
@@ -149,8 +149,8 @@ export default function ImageGallery() {
                                 <Image src={item.src} alt="images"
                                     fill
                                     style={{ objectFit: 'cover' }}
-                                    priority={true}
-                                    sizes='100px' />
+
+                                    sizes='60px' />
                             </div>
                         </SwiperSlide>
                     ))}
