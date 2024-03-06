@@ -545,7 +545,7 @@ export default function Home() {
                       </a>
                     </Link>
 
-                    <a className="block uppercase  text-[13.5px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden cursor-pointer"
+                    <span className="block uppercase  text-[13.5px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden cursor-pointer"
                       onClick={() => {
 
                         handleLangChange()
@@ -555,7 +555,7 @@ export default function Home() {
 
 
                       </m.span>
-                    </a>
+                    </span>
                   </div>
                 </div>
               </article>
