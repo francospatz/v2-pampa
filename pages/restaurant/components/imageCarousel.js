@@ -126,7 +126,7 @@ export default function ImageGallery() {
                 grabCursor={true}
                 spaceBetween={10}
                 slidesPerView={'auto'}
-                freeMode={{ enabled: true, momentum: true, momentumRatio: 1.5, sticky: true }}
+                freeMode={{ enabled: true, momentum: true, momentumRatio: 1.5 }}
                 modules={[Navigation, FreeMode]}
                 className="thumbBtn min-h-[3em] h-[3em] w-full"
             >
