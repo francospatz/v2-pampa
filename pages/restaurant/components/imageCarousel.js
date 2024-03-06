@@ -101,7 +101,7 @@ export default function ImageGallery() {
                 lazy={true}
                 grabCursor={true}
                 navigation={true}
-
+                spaceBetween={30}
                 className="thumbShow fade"
                 ref={swiperRef}
             >
@@ -111,7 +111,7 @@ export default function ImageGallery() {
                             <div className='flex h-full items-center justify-center'>
                                 <Image
                                     src={item}
-                                    priority={false}
+                                    priority={index === 0 ? true : false}
                                     alt="images"
 
                                     /* width={'100%'} */
