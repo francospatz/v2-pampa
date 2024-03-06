@@ -50,7 +50,7 @@ export default function Gallery() {
                         <Div100vh className='w-full bg-off-white'>
                             <m.div variants={fade} className="h-full bg-off-white text-light-brown selection:bg-off-white selection:text-light-brown">
 
-                                <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[92%] flex  flex-col items-start justify-start" >
+                                <m.main variants={fade} className="pb-0 p-4 md:p-6 relative w-full relative bg-off-white h-[85%] md:h-[91%] flex  flex-col items-start justify-start" >
                                     <div className="w-full h-[8%] relative z-10  flex justify-center items-center">
 
                                         <p className="w-full md:w-11/12 font-serif text-[3rem] md:text-[4rem] text-center font-bold" >
@@ -76,7 +76,7 @@ export default function Gallery() {
                                     </article>
 
                                 </m.main>
-                                <m.footer variants={fade} className="pt-0 h-[8%] p-4 md:p-6 bg-off-white 
+                                <m.footer variants={fade} className="pt-0 h-[15%] md:h-[9%] p-4 md:p-6 bg-off-white 
                                  w-full flex items-end">
                                     <div className="flex flex-col md:flex-row w-full">
 
@@ -118,25 +118,3 @@ export default function Gallery() {
     )
 }
 
-const Column = ({ images, y }) => {
-    return (
-        <motion.div
-            className="column"
-            style={{ y }}
-        >
-            {
-                images.map((src, i) => {
-                    return <div key={i} className="imageContainer">
-                        <Image
-                            src={`${src}`}
-                            alt='image'
-                            fill
-                            sizes='100%'
-                            priority={true}
-                        />
-                    </div>
-                })
-            }
-        </motion.div>
-    )
-}
