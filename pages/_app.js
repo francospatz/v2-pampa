@@ -16,14 +16,9 @@ import image5 from '../public/images/06.webp'
 import { ReactLenis } from '@studio-freight/react-lenis'
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/thumbs';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/mousewheel';
-import 'swiper/css/autoplay';
+
 import 'swiper/css/effect-fade';
-import 'swiper/css/grid';
+
 import { LangContext } from '@/context/lang'
 
 
