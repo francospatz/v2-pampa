@@ -89,7 +89,7 @@ const images = [image1, image2, image3, image4, image5, image6, image7, image8, 
 export default function ImageGallery() {
     const swiperRef = useRef(null);
     const handleChange = (i) => {
-        swiperRef.current.swiper.slideTo(i);
+        swiperRef.current.swiper.slideToLoop(i, 0, false);
     };
 
     return (
@@ -113,7 +113,7 @@ export default function ImageGallery() {
                                     src={item}
 
                                     alt="images"
-                                    /* placeholder='blur' */
+                                    placeholder='blur'
                                     style={{ objectFit: 'contain' }}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className='block h-full object-contain' />
