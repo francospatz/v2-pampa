@@ -99,7 +99,7 @@ export default function Gallery() {
                                             </span>
                                             <span className="block w-1/2  text-right  ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
                                                 <Link legacyBehavior href="/restaurant"><a className="group relative">
-                                                    {langContext === 'es' ? 'Volver' : 'Back to home'}
+                                                    {langContext === 'es' ? 'Volver' : 'Back'}
                                                     <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
                                             </span>
 
