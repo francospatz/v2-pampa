@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Muller', 'Arial', 'sans-serif'],
-      'serif': ['Argent', 'Georgia', 'serif'],
-      'mono': ['Lucida Console', 'Courier', 'monospace'],
+      'serif': ['Argent', 'Georgia', 'serif']
     },
     screens: {
       xs: '350px',

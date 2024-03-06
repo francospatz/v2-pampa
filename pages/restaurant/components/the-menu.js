@@ -1,13 +1,11 @@
 'use client'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useContext } from 'react'
 import Layout from '@/components/layout'
 import { fade, revealNoDelay } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { LangContext } from '@/context/lang'
-import Div100vh from 'react-div-100vh'
-
 
 export default function TheMenu() {
 
