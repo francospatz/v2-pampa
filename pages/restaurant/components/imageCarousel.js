@@ -88,7 +88,7 @@ export default function ImageGallery() {
     };
 
     return (
-        <m.div variants={fade} className="h-full w-full md:w-4/5 flex flex-col justify-center">
+        <m.div variants={fade} className="h-full w-full md:w-4/5 flex flex-col justify-center relative z-[10005]">
             <Swiper
                 modules={[Navigation]}
                 loop={true}
@@ -110,10 +110,10 @@ export default function ImageGallery() {
                                     alt="images"
 
                                     /* width={'100%'} */
-                                    placeholder='blur'
+                                    /* placeholder='blur' */
                                     style={{ objectFit: 'contain' }}
                                     sizes="50vw"
-                                    className='h-full object-contain' />
+                                    className='h-full object-contain ' />
                                 <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                             </div>
                         </SwiperSlide>
