@@ -8,11 +8,11 @@ import { IntroContext } from '@/context/intro'
 import { ThemeContext } from '@/context/theme'
 import { useEffect, useState } from 'react'
 import Image from "next/legacy/image"
-import image1 from '../public/images/gallery/home/1.webp'
-import image2 from '../public/images/gallery/home/2.webp'
-import image3 from '../public/images/gallery/home/4.webp'
-import image4 from '../public/images/gallery/home/5.webp'
-import image5 from '../public/images/gallery/home/6.webp'
+import image1 from '../public/images/gallery/home/1.jpg'
+import image2 from '../public/images/gallery/home/2.jpg'
+import image3 from '../public/images/gallery/home/4.jpg'
+import image4 from '../public/images/gallery/home/5.jpg'
+import image5 from '../public/images/gallery/home/6.jpg'
 import { ReactLenis } from '@studio-freight/react-lenis'
 import 'swiper/css';
 import 'swiper/css/navigation';
