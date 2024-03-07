@@ -7,7 +7,7 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  output: "export",
+
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
     if (!dev && !isServer) {
@@ -21,4 +21,5 @@ module.exports = {
 
     return config;
   },
+  //output: "export"
 };
