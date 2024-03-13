@@ -45,6 +45,15 @@ const imageRevealOut = {
 
 export default function App({ Component, pageProps }) {
   const router = useRouter()
+
+  useEffect(() => {
+    if (!router.isReady) { return } else {
+      if (router.query && router.query["fbclid"]) {
+        router.replace('/')
+      }
+    }
+  }, [router])
+
   const [introContext, setIntroContext] = useState(false);
   const [themeContext, setThemeContext] = useState(0);
   const [langContext, setLangContext] = useState('es')
