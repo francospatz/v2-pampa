@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/images/site.webmanifest" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#FCF9F0" />
-          <meta http-equiv="Refresh" content="0.1; url=http://www.pampagrillmalaga.com/" />
+          {/* <meta http-equiv="Refresh" content="0.1; url=http://www.pampagrillmalaga.com/" /> */}
         </Head>
 
         <body className='bg-off-white'>
