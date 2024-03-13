@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
 
         </Head>
 
-        <body className='bg-off-white' onLoad={() => window.location = '/'}>
+        <body className='bg-off-white'>
           <Main className='bg-off-white' />
           <NextScript />
         </body>
