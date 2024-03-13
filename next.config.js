@@ -21,5 +21,13 @@ module.exports = {
 
     return config;
   },
-
+  /*   async redirects() {
+      return [
+        {
+          source: '/\\(?fbclid=\\)',
+          destination: '/',
+          permanent: false,
+        }
+      ]
+    } */
 };
