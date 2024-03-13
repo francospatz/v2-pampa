@@ -21,6 +21,7 @@ export default function Home() {
   <NextSeo title="Pampa Grill" />
   const containerRef = useRef(null)
 
+
   const [introContext, setIntroContext] = useContext(IntroContext);
   const [themeContext, setThemeContext] = useContext(ThemeContext);
   const [langContext, setLangContext] = useContext(LangContext);

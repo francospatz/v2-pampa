@@ -46,14 +46,6 @@ const imageRevealOut = {
 export default function App({ Component, pageProps }) {
   const router = useRouter()
 
-  useEffect(() => {
-    if (!router.isReady) { return } else {
-      if (router.query && router.query["fbclid"]) {
-        router.replace('/')
-      }
-    }
-  }, [router])
-
   const [introContext, setIntroContext] = useState(false);
   const [themeContext, setThemeContext] = useState(0);
   const [langContext, setLangContext] = useState('es')
@@ -66,11 +58,11 @@ export default function App({ Component, pageProps }) {
   let colorThemes = ['bg-off-white text-light-brown'];
 
   return (
-    <ReactLenis root>
+    <ReactLenis root >
       <DefaultSeo {...SEO} />
       <div className="grain fixed w-full  inset-0 pointer-events-none z-[10000]"></div>
 
-      <IntroContext.Provider value={[introContext, setIntroContext]}>
+      <IntroContext.Provider value={[introContext, setIntroContext]} >
         <ThemeContext.Provider value={[themeContext, setThemeContext]}>
           <LangContext.Provider value={[langContext, setLangContext]}>
             {/* INTRO START */}
