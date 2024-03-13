@@ -50,6 +50,14 @@ export default function App({ Component, pageProps }) {
   const [themeContext, setThemeContext] = useState(0);
   const [langContext, setLangContext] = useState('es')
 
+  /* const handleUrl = () => {
+    if (router.asPath == '/' || router.asPath == '/?fbclid=') {
+      return true
+    } else {
+      return false
+    }
+  } */
+
   useEffect(() => {
     setLangContext(navigator.language || navigator.userLanguage === "es-ES" ? 'es' : 'en')
     setThemeContext(0)
@@ -67,7 +75,7 @@ export default function App({ Component, pageProps }) {
           <LangContext.Provider value={[langContext, setLangContext]}>
             {/* INTRO START */}
             <LazyMotion features={domAnimation}>
-              {!introContext /* && router.asPath == '/' */ && (
+              {!introContext && router.asPath === '/' && (
                 <>
                   <m.div
                     initial="hidden"
