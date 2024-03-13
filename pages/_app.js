@@ -67,7 +67,7 @@ export default function App({ Component, pageProps }) {
           <LangContext.Provider value={[langContext, setLangContext]}>
             {/* INTRO START */}
             <LazyMotion features={domAnimation}>
-              {!introContext && router.asPath == '/' && (
+              {!introContext /* && router.asPath == '/' */ && (
                 <>
                   <m.div
                     initial="hidden"
