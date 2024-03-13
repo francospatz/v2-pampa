@@ -69,7 +69,6 @@ import image64 from '../../../public/images/gallery/team/4.webp'
 import image65 from '../../../public/images/gallery/team/5.webp'
 import image66 from '../../../public/images/gallery/team/6.webp'
 import image67 from '../../../public/images/gallery/team/7.webp'
-import image68 from '../../../public/images/gallery/team/8.webp'
 import image69 from '../../../public/images/gallery/team/9.webp'
 import image70 from '../../../public/images/gallery/team/10.webp'
 import image71 from '../../../public/images/gallery/team/11.webp'
@@ -77,7 +76,7 @@ import image72 from '../../../public/images/gallery/team/12.webp'
 import image73 from '../../../public/images/gallery/team/13.webp'
 import image74 from '../../../public/images/gallery/team/14.webp'
 
-const images = [image73, image1, image2, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image18, image19, image22, image23, image24, image25, image26, image27, image28, image29, image30, image3, image4, image5, image31, image32, image33, image34, image35, image36, image37, image38, image40, image41, image42, image43, image44, image45, image46, image47, image48, image49, image50, image51, image52, image53, image54, image55, image56, image57, image58, image59, image60, image62, image63, image64, image65, image66, image67, image68, image69, image70, image71, image72, image74]
+const images = [image73, image1, image2, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image18, image19, image22, image23, image24, image25, image26, image27, image28, image29, image30, image3, image4, image5, image31, image32, image33, image34, image35, image36, image37, image38, image40, image41, image42, image43, image44, image45, image46, image47, image48, image49, image50, image51, image52, image53, image54, image55, image56, image57, image58, image59, image60, image62, image63, image64, image65, image66, image67, image69, image70, image71, image72, image74]
 
 
 
