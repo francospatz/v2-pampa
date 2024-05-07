@@ -77,7 +77,7 @@ export default function Contact() {
                         </a>
                         <a href="tel:0034657602690" className="inline-block group font-serif text-light-brown relative text-lg lg:text-2xl font-normal leading-[1.15] md:leading-[1.2] mr-8  transition-colors ease-in-out duration-500  group">
                           <m.span variants={reveal} className="block">
-                            +34 657602690
+                            +34 951439974
 
 
                           </m.span>
