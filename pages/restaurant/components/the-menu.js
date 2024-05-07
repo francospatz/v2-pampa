@@ -167,6 +167,14 @@ export default function TheMenu() {
                                                 <i>Grilled Quarter of boneless chicken</i>
                                                 <br />
                                                 <br />
+                                                <b>Tomahawk de cerdo ibérico con crema de
+                                                    manzana asada y salsa criolla&nbsp;&nbsp;&nbsp;25.00</b>
+                                                <br />
+                                                <i>Iberian pork tomahawk with roasted
+                                                    apple cream and criolla sauce
+                                                </i>
+                                                <br />
+                                                <br />
                                             </p>
                                             <h3>Cortes especiales</h3>
                                             <p>
@@ -174,11 +182,7 @@ export default function TheMenu() {
                                                 <br />
                                                 <i>Quality Aged Tomahawk Ribeye Steak </i>
                                                 <br />
-                                                <br />
-                                                <b>T Bone Angus&nbsp;&nbsp;&nbsp;110.00/kg</b>
-                                                <br />
-                                                <i>T Bone Angus</i>
-                                                <br />
+
                                                 <br />
                                                 <b>Chuletón Angus Aged Reserva (sin hueso)&nbsp;&nbsp;&nbsp;120.00/kg</b>
                                                 <br />
@@ -217,13 +221,6 @@ export default function TheMenu() {
                                                 <br />
                                                 <i>Wood-fired and grilled vegetables
                                                     with green leaves and gremolata</i>
-                                                <br />
-                                                <br />
-                                                <b>Berenjena cuerno de gacela a la parrilla
-                                                    con alioli ahumado&nbsp;&nbsp;&nbsp;9.00</b>
-                                                <br />
-                                                <i>Grilled horned melon eggplant
-                                                    with smoked aioli </i>
                                                 <br />
                                                 <br />
                                                 <b>Pimientos asados con salsa de sus jugos&nbsp;&nbsp;&nbsp;9.00</b>
@@ -304,6 +301,14 @@ export default function TheMenu() {
                                                 <br />
                                                 <i>Spinach and ricotta cannelloni
                                                     with homemade tomato sauce
+                                                </i>
+                                                <br />
+                                                <br />
+                                                <b>Rigatoni con salsa boloñesa de solomillo
+                                                    y parmesano rallado&nbsp;&nbsp;&nbsp;24.00</b>
+                                                <br />
+                                                <i>Rigatoni with bolognese tenderloin sauce
+                                                    and grated parmesan
                                                 </i>
                                                 <br />
                                                 <br />
