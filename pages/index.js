@@ -519,7 +519,7 @@ export default function Home() {
                   </div>
 
                   <div className="2xl:ml-auto flex space-x-4 md:space-x-6 mix-blend-display ">
-                    <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341?cc=16768-fbd&gad_source=1&gclid=CjwKCAiA29auBhBxEiwAnKcSqjiOXnPSN0N7bU4HpOtGitNOLy3O8EUTIgBcn_7MLL9nIOl2J8f1MxoC5BIQAvD_BwE&gclsrc=aw.ds" target="_blank" rel="noopener noreferrer" className="block uppercase text-[13.5px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                    <a href="https://widget.thefork.com/es/3245c646-07be-4c8a-b177-5f0867f632b1" target="_blank" rel="noopener noreferrer" className="block uppercase text-[13.5px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                       <m.span variants={reveal} className="block">
                         {langContext === 'es' ? 'Reservas' : 'Bookings'}
 

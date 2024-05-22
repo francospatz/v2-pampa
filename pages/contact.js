@@ -131,7 +131,7 @@ export default function Contact() {
                       </div>
                       <div className="w-full md:w-1/2  flex justify-center items-center ">
 
-                        <a href="https://www.thefork.es/restaurante/pampa-grill-malaga-r363341" target="_blank" className="inline-block group font-serif text-light-brown relative text-3xl font-normal leading-[1.15] md:leading-[1.2] md:pt-0 pb-16 md:pb-0  transition-colors ease-in-out duration-500  group">
+                        <a href="https://widget.thefork.com/es/3245c646-07be-4c8a-b177-5f0867f632b1" target="_blank" className="inline-block group font-serif text-light-brown relative text-3xl font-normal leading-[1.15] md:leading-[1.2] md:pt-0 pb-16 md:pb-0  transition-colors ease-in-out duration-500  group">
                           <m.span variants={reveal} className="block">
                             {langContext === 'es' ? 'Reserva una mesa' : 'Book a table'}
 
